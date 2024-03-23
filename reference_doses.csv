@@ -1,0 +1,72 @@
+Analyte,rfd,unit,Source,Duration,Category
+Hg,1.00E+02,ng/kg/day,IRIS RfD,chronic,1
+TEQ,7.00E-04,ng/kg/day,IRIS RfD,chronic,1
+PFBA,1000,ng/kg/day,IRIS RfD,chronic,1
+PFPeA,500,ng/kg/day,TX TCEQ RfD,chronic,1
+PFHxA,500,ng/kg/day,IRIS RfD,chronic,1
+PFHpA,23,ng/kg/day,TX TCEQ RfD,chronic,1
+PFOA,3,ng/kg/day,ATSDR MRL,intermediate,1
+PFNA,3,ng/kg/day,ATSDR MRL,intermediate,1
+PFDA,15,ng/kg/day,TX TCEQ RfD,chronic,1
+PFUnA,12,ng/kg/day,TX TCEQ RfD,chronic,1
+PFDoA,12,ng/kg/day,TX TCEQ RfD,chronic,1
+PFTrDA,12,ng/kg/day,TX TCEQ RfD,chronic,1
+PFTeDA,12,ng/kg/day,TX TCEQ RfD,chronic,1
+PFBS,300,ng/kg/day,PPVRT RfD,chronic,1
+PFPeS,,ng/kg/day,,,2
+PFHxS,20,ng/kg/day,ATSDR MRL,intermediate,1
+PFHpS,,ng/kg/day,,,2
+PFOS,2,ng/kg/day,ATSDR MRL,intermediate,1
+PFNS,,ng/kg/day,,,3
+PFDS,12,ng/kg/day,TX TCEQ RfD,,1
+PFDoS,,ng/kg/day,,,3
+4:2 FTS,,ng/kg/day,,,2
+6:2 FTS,,ng/kg/day,,,2
+8:2 FTS,,ng/kg/day,,,2
+PFOSA,12,ng/kg/day,TX TCEQ RfD,,1
+N-MeFOSA,,ng/kg/day,,,2
+N-EtFOSA,,ng/kg/day,,,2
+MeFOSAA,,ng/kg/day,,,2
+EtFOSAA,,ng/kg/day,,,2
+N-MeFOSE,,ng/kg/day,,,2
+N-EtFOSE,,ng/kg/day,,,2
+HFPO-DA,3,ng/kg/day,EPA 2023,chronic,1
+ADONA,,ng/kg/day,,,2
+9Cl-PF3ONS,,ng/kg/day,,,3
+11Cl-PF3OUdS,,ng/kg/day,,,3
+3:3 FTCA,,ng/kg/day,,,2
+5:3 FTCA,,ng/kg/day,,,2
+7:3 FTCA,,ng/kg/day,,,2
+PFEESA,,ng/kg/day,,,3
+PFMPA,,ng/kg/day,,,2
+PFMBA,,ng/kg/day,,,2
+NFDHA,,ng/kg/day,,,2
+Hexachlorobenzene,70,ng/kg/day,ATSDR MRL,chronic,1
+"HCH, alpha",900,ng/kg/day,ATSDR MRL,chronic,1
+"HCH, beta",600,ng/kg/day,ATSDR MRL,intermediate,1
+"HCH, gamma",0.8,ng/kg/day,ATSDR MRL,intermediate,1
+Heptachlor,100,ng/kg/day,ATSDR MRL,intermediate,1
+Aldrin,30,ng/kg/day,IRIS RfD,chronic,1
+"Chlordane, gamma (trans)",500,ng/kg/day,IRIS RfD,chronic,1
+"Chlordane, alpha (cis)",500,ng/kg/day,IRIS RfD,chronic,1
+"Chlordane, oxy-",500,ng/kg/day,IRIS RfD,chronic,1
+"Nonachlor, trans-",500,ng/kg/day,IRIS RfD,chronic,1
+"Nonachlor, cis-",500,ng/kg/day,IRIS RfD,chronic,1
+Mirex,200,ng/kg/day,IRIS RfD,chronic,1
+"2,4'-DDE",500,ng/kg/day,ATSDR MRL,chronic,1
+"4,4'-DDE",500,ng/kg/day,ATSDR MRL,chronic,1
+"2,4'-DDD",500,ng/kg/day,ATSDR MRL,chronic,1
+"4,4'-DDD",500,ng/kg/day,ATSDR MRL,chronic,1
+"2,4'-DDT",500,ng/kg/day,ATSDR MRL,chronic,1
+"4,4'-DDT",500,ng/kg/day,ATSDR MRL,chronic,1
+"HCH, delta",,ng/kg/day,,,2
+Heptachlor Epoxide,13,ng/kg/day,IRIS RfD,chronic,1
+Dieldrin,50,ng/kg/day,IRIS RfD,chronic,1
+Endrin,300,ng/kg/day,IRIS RfD,chronic,1
+Endrin Aldehyde,,ng/kg/day,IRIS RfD,,2
+Endrin Ketone,,ng/kg/day,IRIS RfD,,2
+Methoxychlor,5000,ng/kg/day,IRIS RfD,chronic,2
+alpha-Endosulphan,5000,ng/kg/day,ATSDR MRL,chronic,2
+beta-Endosulphan,5000,ng/kg/day,ATSDR MRL,chronic,2
+Endosulphan Sulphate,,ng/kg/day,,,2
+TOTAL PCBs,20,ng/kg/day,IRIS RfD,chronic,1

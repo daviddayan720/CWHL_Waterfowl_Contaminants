@@ -1,0 +1,73 @@
+Analyte,CSF,unit
+Hg,,kgday/ng
+TEQ,0.15,kgday/ng
+PFBA,,kgday/ng
+PFPeA,,kgday/ng
+PFHxA,,kgday/ng
+PFHpA,,kgday/ng
+PFOA,7.00E-08,kgday/ng
+PFNA,,kgday/ng
+PFDA,,kgday/ng
+PFUnA,,kgday/ng
+PFDoA,,kgday/ng
+PFTrDA,,kgday/ng
+PFTeDA,,kgday/ng
+PFBS,,kgday/ng
+PFPeS,,kgday/ng
+PFHxS,,kgday/ng
+PFHpS,,kgday/ng
+PFOS,,kgday/ng
+PFNS,,kgday/ng
+PFDS,,kgday/ng
+PFDoS,,kgday/ng
+4:2 FTS,,kgday/ng
+6:2 FTS,,kgday/ng
+8:2 FTS,,kgday/ng
+PFOSA,,kgday/ng
+N-MeFOSA,,kgday/ng
+N-EtFOSA,,kgday/ng
+MeFOSAA,,kgday/ng
+EtFOSAA,,kgday/ng
+N-MeFOSE,,kgday/ng
+N-EtFOSE,,kgday/ng
+HFPO-DA,,kgday/ng
+ADONA,,kgday/ng
+9Cl-PF3ONS,,kgday/ng
+11Cl-PF3OUdS,,kgday/ng
+3:3 FTCA,,kgday/ng
+5:3 FTCA,,kgday/ng
+7:3 FTCA,,kgday/ng
+PFEESA,,kgday/ng
+PFMPA,,kgday/ng
+PFMBA,,kgday/ng
+NFDHA,,kgday/ng
+Hexachlorobenzene,1.60E-06,kgday/ng
+"HCH, alpha",6.30E-06,kgday/ng
+"HCH, beta",1.80E-06,kgday/ng
+"HCH, gamma",1.10E-06,kgday/ng
+Heptachlor,4.50E-06,kgday/ng
+Aldrin,1.70E-05,kgday/ng
+"Chlordane, gamma (trans)",3.50E-07,kgday/ng
+"Chlordane, alpha (cis)",3.50E-07,kgday/ng
+"Chlordane, oxy-",3.50E-07,kgday/ng
+"Nonachlor, trans-",3.50E-07,kgday/ng
+"Nonachlor, cis-",3.50E-07,kgday/ng
+Mirex,1.80E-05,kgday/ng
+"2,4'-DDE",3.40E-07,kgday/ng
+"4,4'-DDE",3.40E-07,kgday/ng
+"2,4'-DDD",2.40E-07,kgday/ng
+"4,4'-DDD",2.40E-07,kgday/ng
+"2,4'-DDT",3.40E-07,kgday/ng
+"4,4'-DDT",3.40E-07,kgday/ng
+Technical Toxaphene,1.10E-06,kgday/ng
+"HCH, delta",,kgday/ng
+Heptachlor Epoxide,9.10E-06,kgday/ng
+Dieldrin,1.60E-05,kgday/ng
+Endrin,,kgday/ng
+Endrin Aldehyde,,kgday/ng
+Endrin Ketone,,kgday/ng
+Methoxychlor,,kgday/ng
+alpha-Endosulphan,,kgday/ng
+beta-Endosulphan,,kgday/ng
+Endosulphan Sulphate,,kgday/ng
+TOTAL PCBs,2.00E-06,kgday/ng
