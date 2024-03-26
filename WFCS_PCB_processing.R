@@ -128,6 +128,13 @@ PCBs_processed <- bind_rows(PCBs_full1,PCBs_full2,PCBs_full3,PCBs_full4, PCBs_fu
 # Process the data.
 PCBs_processed <- PCBs_processed %>% select(-`original dataset`)
 
+# Check IDs in processed data for mismatches with metadata
+# Check that SGS IDs match metadata IDs
+metadata_PCBtest <- metadata %>% 
+  filter(PCBOCP_test == "Y")
+ID_mismatch <- PCBs_processed %>% 
+  filter(!ID %in% metadata_PCBtest$ID) # no mismatched IDs
+
 # Write the csv file.
 write_csv(PCBs_processed, "WFCS_PCBs_processed.csv")
 
