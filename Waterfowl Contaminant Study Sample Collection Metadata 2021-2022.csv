@@ -1,109 +1,109 @@
-ID,Hg_test,dioxin_test,PCBOCP_test,PFAS_test,species,sex,state,ecoregion,sample_group,county,town,address,latitude,longitude,harvest_date,age,weight_(g),culmen_(mm),tarsus_(mm),head_length_(mm),,
-1,Y,N,N,Y,WODU,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/19/2021,Unknown,Unknown,Unknown,Unknown,Unknown,,
-2,Y,Y,Y,Y,WODU,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/21/2021,Unknown,Unknown,Unknown,Unknown,Unknown,,
-3,Y,N,Y,Y,MALL,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/19/2021,Unknown,Unknown,Unknown,Unknown,Unknown,,
-4,Y,Y,Y,Y,MALL,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/21/2021,Unknown,Unknown,Unknown,Unknown,Unknown,,
-6,Y,Y,Y,Y,MALL,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/16/2021,Unknown,Unknown,Unknown,Unknown,Unknown,,
-7,Y,Y,Y,Y,WODU,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/19/2021,Unknown,Unknown,Unknown,Unknown,Unknown,,
-8,Y,Y,Y,Y,WODU,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/21/2021,Unknown,Unknown,Unknown,Unknown,Unknown,,
-9,N,Y,Y,Y,MALL,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/19/2021,Unknown,Unknown,Unknown,Unknown,Unknown,,
-10,Y,Y,Y,Y,ABDU,Unknown,NY,83,2,Onondaga,Geddes,Onandaga Lake,43.09130038,-76.21063624,12/25/2021,Unknown,Unknown,Unknown,Unknown,Unknown,,
-11-1,Y,Y,Y,Y,ABDU,Unknown,NY,83,1,Niagara,Royalton,West Ruddy Marsh Tonawanda WMA,43.12304632,-78.48756199,10/26/2021,Unknown,Unknown,Unknown,Unknown,Unknown,,
-11-2,Y,Y,Y,Y,ABDU,Unknown,NY,83,1,Niagara,Royalton,West Ruddy Marsh Tonawanda WMA,43.12304632,-78.48756199,10/26/2021,Unknown,Unknown,Unknown,Unknown,Unknown,,
-1 NY,Y,Y,Y,Y,AGWT,Unknown,NY,83,3,Jefferson,Pamelia,Perch River WMA Vaadi Road,44.0831549,-75.97405968,10/3/2021,Unknown,Unknown,Unknown,Unknown,Unknown,,
-21-1,Y,Y,Y,Y,WODU,M,NY,83,1,Cayuga,Mentz,Unknown,43.06034093,-76.63156686,10/3/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-26-2,Y,Y,Y,Y,MALL,M,NY,83,3,St. Lawrence,Waddington,Unknown,44.88078471,-75.16328202,10/7/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-34-1,Y,Y,Y,Y,MALL,F,NY,58,3,Clinton,Lyon Mountain,"142-502 Sunset Rd, Lyon Mountain NY",44.73091206,-73.92528655,10/8/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-37-2,Y,Y,Y,Y,WODU,M,PA,64,2,York,Washington Township,Shippensburg Road,40.00389121,-77.00107602,10/9/2024,Adult,Unknown,Unknown,Unknown,Unknown,,
-41-1,Y,Y,Y,Y,AGWT,F,PA,60,3,Wayne,Honesdale,"1797 Upper Woods Rd, Cold Springs ",41.75482747,-75.2881477,10/9/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-46-1,Y,Y,Y,Y,WODU,M,PA,61/62,3,Mercer,Jackson Center,"State Gamelands No 130, Jackson Center Polk Rd",41.29430484,-80.0990061,10/11/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-49-1,Y,Y,Y,Y,ABDU,M,NY,83,1,St. Lawrence,Canton,Unknown,44.61057773,-75.24027161,10/8/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-53-1,Y,Y,Y,Y,MALL,M,PA,67,1,Lebanon,North Cornwall Township,Unknown,40.30018619,-76.42824773,10/13/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-57-1,Y,Y,Y,Y,MALL,M,NY,83,1,Essex,Westport,Cole Island,44.14144,-73.42124,10/13/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-58-1,Y,Y,Y,Y,CAGO,Unknown,NY,83,1,Essex,Westport,Cole Island,44.14144,-73.42124,10/13/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-62-3,Y,Y,Y,Y,WODU,M,PA,61/62,2,Lawrence,New Castle,Unknown,40.96172411,-80.37703404,10/13/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-64-1,Y,Y,Y,Y,WODU,M,PA,61/62,3,Erie,Waterford,"State Gamelands No 109, Donation Road",42.00113346,-79.99687948,10/14/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-69-1,Y,Y,Y,Y,WODU,M,NY,58,2,Columbia,Ancram,New Forge Road,42.11115352,-73.6742602,10/16/2021,Juvenile,Unknown,Unknown,Unknown,Unknown,,
-70-1,Y,Y,Y,Y,MALL,M,NY,83,3,Monroe,Greece,"Maniton Road, Braddocks Bay, Hilton ",43.31357168,-77.72206721,10/16/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-72-1,Y,Y,Y,Y,MALL,M,PA,67,2,Lebanon,Bethel Township,Unknown,40.40575203,-76.38036867,10/16/2021,Adult,1315,57.7,57.4,125.8,,
-74-1,Y,Y,Y,Y,WODU,M,NY,83,2,Schoharie,Carlisle,Schoolhouse Road,42.77181834,-74.49557852,10/16/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-77-1,Y,Y,Y,Y,MALL,M,NY,59,2,Ulster,"Ulster Park, Rosendale",Creek Locks Road,41.85410519,-74.04613227,10/18/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-82-1,Y,Y,Y,Y,ABDU,M,NY,67,2,Ulster,Hurley,Wynkoop Road,41.92671586,-74.07058815,10/20/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-84-1,Y,Y,Y,Y,AGWT,F,NY,83,1,Seneca,Tyre,Montezuma National Wildlife Refuge - Tschache Pool,42.99548705,-76.78190343,10/21/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-86-1,Y,Y,Y,Y,WODU,M,PA,61/62,1,Crawford,South Shenango Township,"Fitch Road, Westford",41.54605682,-80.46324975,10/22/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-87-1,Y,Y,Y,Y,WODU,M,NY,58,2,Columbia,Ancram,New Forge Road,42.11446958,-73.66988471,10/22/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-89-1,Y,Y,Y,Y,MALL,M,NY,58,2,Columbia,Copake,16 Mallard Drive,42.15018215,-73.59218239,10/23/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-94-2,N,Y,N,Y,CAGO,Unknown,NY,60,2,Ulster,West Hurley,Spillway Road,41.94259572,-74.14590836,10/23/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-94-3,Y,Y,Y,Y,CAGO,Unknown,NY,60,2,Ulster,West Hurley,Spillway Road,41.94259572,-74.14590836,10/23/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-95-1,Y,Y,Y,Y,MALL,M,NY,60,2,Chenango,Greene,Chenango River,42.34547258,-75.73785811,10/23/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-96-2,N,Y,Y,Y,AGWT,F,NY,83,2,Scoharie,Sharon,White Road,42.78977208,-74.54596062,10/23/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-98-1,Y,Y,Y,Y,WODU,M,PA,60,2,Tioga,Lawrence Township,Tioga-Hammond Reservoir,41.94161951,-77.19578955,10/23/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-103-1,Y,Y,N,Y,CAGO,Unknown,NY,83,1,Cayuga,Aurelius,Unknown,42.9293813,-76.65463515,10/24/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-103-2,Y,N,N,N,AGWT,Unknown,NY,83,1,Cayuga,Aurelius,Unknown,42.9293813,-76.65463515,10/24/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-119-4,Y,Y,Y,Y,WODU,F,NY,61/62,1,Cattaraugus,Conewango Valley,Conewango Swamp,42.19054663,-79.02534857,10/31/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-122-1,Y,Y,Y,Y,CAGO,M,PA,61/62,2,Crawford,Hartstown,"State Gamelands No 214, Pymatuning WMA, Hartstown Road",41.60264293,-80.41748605,11/1/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-123-1,Y,Y,Y,Y,MALL,M,PA,61/62,2,Crawford,"Pine Township, Linseville",Linesville area L,41.62789941,-80.3984316,11/1/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-128-1,Y,Y,Y,Y,CAGO,M,PA,83,3,Erie,East Springfield ,"State Gamelands No 314, Elmwood Home Road",41.9719465,-80.47351223,11/3/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-131-1,Y,Y,Y,Y,MALL,M,PA,61/62,1,Lawrence,New Castle,"State Gamelands No 178, Valley Road",41.05404019,-80.31558411,10/17/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-132-1,Y,Y,Y,Y,MALL,M,NY,60,3,Erie,East Concord,10004 Allen Road,42.57557005,-78.62546495,11/3/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-136-1,Y,Y,Y,Y,ABDU,Unknown,NY,83,2,Monroe,Wheatland,Scottsville,43.02357099,-77.73627261,11/4/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-138-1,Y,Y,Y,Y,CAGO,Unknown,NY,67,2,Ulster,Hurley,Wynkoop Road,41.93211164,-74.0640972,11/5/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-138-3,Y,Y,N,Y,CAGO,Unknown,NY,67,2,Ulster,Hurley,Wynkoop Road,41.93211164,-74.0640972,11/5/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-142-1,Y,Y,Y,Y,ABDU,Unknown,PA,61/62,2,Crawford,"Pine Township, Linseville",Linesville,41.62926518,-80.40906856,11/8/2021,Adult,1045,53,51.9,110.7,,
-148-1,Y,Y,Y,Y,AGWT,M,PA,61/62,2,Crawford,"Pine Township, Linseville",Linesville area L,41.6265853,-80.40848118,11/12/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-150-1,Y,Y,Y,Y,ABDU,M,NY,67,2,Ulster,Hurley,Wynkoop Road,41.92677972,-74.07320598,11/17/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-158-1,N,Y,Y,Y,WODU,M,NY,59,1,Rensselaer,Castleton on Hudson,Staats Island Road,42.57592187,-73.74310701,11/5/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-161-1,Y,N,N,Y,ABDU,Unknown,NY,60,3,Onondaga,Manlius,8500 US-20,42.92364,-75.9403,11/24/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-177-1,Y,Y,Y,Y,MALL,M,NY,63/84,1,Suffolk,"Amity Harbor, Babylon",Southeast Sand Island,40.6396141,-73.41084014,11/28/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-184-1,Y,Y,Y,Y,MALL,M,PA,69/70,3,Beaver,Ellwood City,103 Pullman Station,40.83188241,-80.25149123,12/7/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-184-2,Y,Y,Y,Y,MALL,F,PA,69/70,3,Beaver,Ellwood City,103 Pullman Station,40.83188241,-80.25149123,12/7/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-190-1A,Y,Y,Y,Y,MALL,M,NY,60,3,Onondaga,Jamesville,3310 Apulia Road,42.93130057,-76.06360818,12/10/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-190-1B,Y,Y,Y,Y,MALL,M,NY,60,3,Onondaga,Jamesville,3310 Apulia Road,42.93130057,-76.06360818,12/10/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-197-1,Y,Y,Y,Y,ABDU,Unknown,PA,63/84,3,Bucks,"Falls Township, Morrisville",Penn Warner Club,40.12582756,-74.7907252,12/16/2021,Adult,1228.7,55.7,55.2,118.8,,
-205-1,Y,Y,Y,Y,MALL,M,PA,64,1,Lancaster,Leola,308 Becker Road,40.13065285,-76.24999864,12/24/2021,Adult,1440,58,42.6,119,,
-206-1,Y,Y,Y,Y,CAGO,Unknown,PA,63/84,3,Bucks,"Falls Township, Morrisville",Penn Warner Club,40.13107282,-74.78250565,12/24/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-209-1,Y,Y,Y,Y,MALL,M,PA,63/84,3,Bucks,"Falls Township, Morrisville",Penn Warner Club,40.13204318,-74.78880269,12/31/2021,Adult,1466.3,53.9,54.2,117.3,,
-209-2,Y,Y,Y,Y,CAGO,Unknown,PA,63/84,3,Bucks,"Falls Township, Morrisville",Penn Warner Club,40.13204318,-74.78880269,12/31/2021,Adult,4988.8,56.8,91.1,129,,
-210-1,Y,Y,Y,Y,CAGO,Unknown,PA,67,1,Huntingdon,Orbisonia,442 Ridgley Street,40.24339,-77.89381,12/31/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-213-2,Y,Y,Y,Y,CAGO,Unknown,PA,61/62,1,Lawrence,"New Castle, Mahoningtown",Cherry Street Bridge,40.9744959,-80.3630094,1/4/2022,Adult,Unknown,Unknown,Unknown,Unknown,,
-216-1,Y,Y,Y,Y,CAGO,Unknown,PA,61/62,3,Erie,Greenfield Township,Wildman Road,42.09105897,-79.83033892,1/6/2022,Adult,Unknown,Unknown,Unknown,Unknown,,
-219-01,Y,Y,Y,Y,ABDU,Unknown,PA,61/62,1,Lawrence,"Mahoning Towship, Hillsville","Mahoning River, Hillsville",41.02863733,-80.51084048,1/10/2022,Adult,Unknown,Unknown,Unknown,Unknown,,
-998-1,Y,Y,Y,Y,AGWT,M,NY,83,3,Jefferson,Perch River,Perch River WMA Lower Pool,44.07455309,-75.99679479,10/3/2021,Adult,Unknown,Unknown,Unknown,Unknown,,
-999-1,Y,Y,Y,Y,ABDU/MALL,F,PA,64,1,Lancaster,Brownstown,Becker Road,40.12628109,-76.24761643,11/25/2021,Unknown,1150,50.3,48.6,105.9,,
-CTABD01,Y,Y,Y,Y,ABDU,M,CT,58,1,Litchfield,Riverton,Hogsback Reservoir,42.00365732,-73.03144978,11/17/2021,Unknown,1316,59,61,121,,
-CTABD02,Y,Y,Y,Y,ABDU,M,CT,59,2,New Haven,Milford,Nells Island,41.1843685,-73.11634804,11/17/2021,Unknown,1452,59,60,119,,
-CTABD03,N,Y,Y,Y,ABDU,Unknown,CT,Unknown,Unknown,Unknown,Unknown,Unknown,,,,Unknown,Unknown,Unknown,Unknown,Unknown,,
-CTAGWT1,Y,Y,Y,Y,AGWT,F,CT,58,1,Litchfield,Riverton,Hogsback Reservoir,42.00365732,-73.03144978,11/18/2021,Unknown,379,48,40,82,,
-CTAGWT2,Y,Y,N,Y,AGWT,Unknown,CT,59,2,Hartford,Wethersfield,Unknown,41.70711368,-72.62240532,10/14/2021,Unknown,Unknown,Unknown,Unknown,Unknown,,
-CTAGWT3,Y,Y,N,Y,AGWT,M,CT,59,2,New Haven,Milford,Nells Island,41.1843685,-73.11634804,11/17/2021,Unknown,410,39,39,83,,
-CTCAG01,Y,Y,Y,Y,CAGO,M,CT,59,2,New London,Lebanon,Unknown,41.6361364,-72.21289822,10/11/2021,Unknown,4812,55,96,128,,
-CTCAG02,Y,Y,Y,Y,CAGO,M,CT,59,3,Windham,Putnam,Unknown,,,10/13/2021,Unknown,4653,55,94,119,,
-CTCAG03,Y,Y,Y,Y,CAGO,M,CT,59,1,Tolland,Andover,Unknown,41.73725705,-72.37036,12/28/2021,Unknown,11313,54,96,124,,
-CTMALL1,Y,Y,Y,Y,MALL,F,CT,59,2,Middlesex,East Haddam,Moodus Reservoir,41.50357485,-72.40353597,10/14/2021,Unknown,1349,54,57,120,,
-CTMALL2,Y,Y,Y,Y,MALL,M,CT,59,1,Middlesex,Old Lyme,Great Island,41.28897256,-72.33274494,10/9/2021,Unknown,1374,55,58,119,,
-CTMALL3,Y,Y,Y,Y,MALL,M,CT,59,3,Windham,Eastford,Papineau Marsh,41.86485294,-72.08154553,11/25/2021,Unknown,1410,54,57,116,,
-CTWOD01,Y,Y,Y,Y,WODU,M,CT,59,3,Fairfield,Monroe,Unknown,,,11/18/2021,Unknown,676,37,45,89,,
-CTWOD02,Y,Y,Y,Y,WODU,M,CT,59,2,Hartford,Wethersfield,Wethersfield Cove,41.72423986,-72.65828691,10/9/2021,Unknown,600,37,44,90,,
-MC-2,Y,Y,Y,Y,AGWT,M,PA,64,1,Lebanon,Klienfeltersville,Middle Creek,40.293479,-76.239054,10/12/2021,Adult,352,36,34,82,,
-NJ_ABDU_01_AD,Y,Y,Y,Y,ABDU,M,NJ,63/84,2,Cumberland,Port Norris,Turkey Point Boat Ramp,39.24619074,-75.13016896,10/30/2021,Adult,1100,52.5,45.9,Unknown,,
-NJ_ABDU_02_LC,Y,Y,Y,Y,ABDU,F,NJ,63/84,1,Cape May,Dennisville,Dennis Creek,39.15779362,-74.86829982,10/23/2021,Adult,1100,54.3,45.7,Unknown,,
-NJ_ABDU_30_AD,Y,Y,Y,Y,ABDU,M,NJ,58,1,Warren,Franklin Township,Musconetcong WMA,40.59838571,-75.17524567,1/7/2022,Adult,1210,53,45.3,Unknown,,
-NJ_AGWT_01_AD,Y,Y,Y,Y,AGWT,M,NJ,64,2,Hudson,Secaucus,Hackensack River,40.80914738,-74.04078696,10/16/2021,Adult,480,37.1,35.5,Unknown,,
-NJ_AGWT_01_LC,Y,Y,Y,Y,AGWT,M,NJ,63/84,1,Cape May,Dennisville,Dennis Creek,39.15779362,-74.86829982,10/23/2021,Adult,365,35.7,30.1,Unknown,,
-NJ_AGWT_02_AD,Y,Y,N,Y,AGWT,F,NJ,63/84,3,Salem,Canton,Mad Horse Creek,39.4372806,-75.4465829,10/23/2021,Adult,330,35.5,28.7,Unknown,,
-NJ_AGWT_02_NJ,Y,Y,N,Y,AGWT,Unknown,NJ,63/84,2,Cumberland,Port Norris,Hanseys Creek Boat Launch,39.2389939,-75.09554857,10/23/2021,Unknown,Unknown,Unknown,Unknown,Unknown,,
-NJ_CAGO_01_AD,Y,Y,Y,Y,CAGO,M,NJ,63/84,2,Gloucester,Logan,Birch Creek,39.7931687,-75.3893586,12/22/2021,Adult,4090,52.9,87.5,Unknown,,
-NJ_CAGO_30_AD,Y,Y,Y,Y,CAGO,M,NJ,67,3,Warren,Hackettstown,Hackettstown Fish Hatchery,40.84219116,-74.8336811,1/26/2022,Adult,4850,60,96.9,Unknown,,
-NJ_MALL_01_AD,Y,Y,Y,Y,MALL,M,NJ,63/84,2,Gloucester,Logan,Birch Creek,39.7931687,-75.3893586,12/22/2021,Adult,1280,57.1,45.5,Unknown,,
-NJ_MALL_10_AD,Y,Y,Y,Y,MALL,M,NJ,63/84,2,Atlantic,Brigantine,Forsythe NWR,39.46503266,-74.45028011,11/24/2021,Adult,1310,53.9,46.7,Unknown,,
-NJ_MALL_11_AD,Y,Y,Y,Y,MALL,M,NJ,67,3,Warren,Knowlton Township,Delaware Lake,40.91979329,-75.06674018,12/10/2021,Adult,1410,55,45.9,Unknown,,
-NJ_MALL_30_AD,Y,Y,Y,Y,MALL,M,NJ,58,1,Morris,Mount Olive,Musconetcong River,40.88951324,-74.79318888,1/13/2021,Adult,1320,53,56,Unknown,,
-NJ_MALL_40_AD,Y,Y,Y,Y,MALL,M,NJ,64,2,Hudson,Secaucus,Hackensack River,40.80914738,-74.04078696,10/16/2021,Adult,1350,52.8,46.1,Unknown,,
-NJ_MALL_60_AD,Y,Y,Y,Y,MALL,F,NJ,64,3,Somerset,Basking Ridge,Great Swamp NWR,40.71997075,-74.5258147,2/15/2022,Adult,1130,Unknown,44.1,Unknown,,
-NJ_WODU_01_AD,Y,Y,Y,Y,WODU,M,NJ,63/84,3,Salem,Canton,Mad Horse Creek,39.4372806,-75.4465829,10/23/2021,Adult,560,34.3,35.9,Unknown,,
-NJ_WODU_01_JK,Y,Y,Y,Y,WODU,M,NJ,67,1,Sussex,Lafayette,Hyper Humus Marshes,41.07898108,-74.71564934,10/16/2021,Adult,690,32.2,39.1,Unknown,,
-NJ_WODU_01_TN,Y,Y,Y,Y,WODU,M,NJ,63/84,1,Atlantic,Weymouth,Great Egg Harbor River ,39.42574179,-74.72704326,10/27/2021,Adult,720,32.7,36.8,Unknown,,
-NJ_WODU_02_AD,Y,Y,Y,Y,WODU,M,NJ,58,1,Warren,Hope,Jenny Jump State Forest,40.91344763,-74.92295983,10/18/2021,Adult,640,32.6,41.4,Unknown,,
-NJ_WODU_03_AD,Y,Y,Y,Y,WODU,F,NJ,64,1,Hunterdon,Hampton,Clinton WMA,40.65365613,-74.96428722,10/19/2021,Adult,600,32.7,40.7,Unknown,,
-NJ_WODU_03_LC,Y,Y,Y,Y,WODU,M,NJ,63/84,2,Cumberland,Port Elizabeth,Menantico River,39.40600974,-74.97795006,10/23/2021,Adult,545,30,35.8,Unknown,,
-NJ_WODU_11_AD,Y,Y,Y,Y,WODU,M,NJ,58,1,Morris,Mount Oliver,Allamuchy Mountain State Park,40.92277421,-74.740237,12/29/2021,Adult,610,36.3,33.3,Unknown,,
+ID,Hg_test,dioxin_test,PCBOCP_test,PFAS_test,species,sex,state,ecoregion,sample_group,county,town,address,latitude,longitude,harvest_date,age,weight_(g),culmen_(mm),tarsus_(mm),head_length_(mm)
+CTMALL2,Y,Y,Y,Y,MALL,M,CT,59,1,Middlesex,Old Lyme,Great Island,41.28897256,-72.33274494,10/9/2021,Unknown,1374,55,58,119
+CTWOD02,Y,Y,Y,Y,WODU,M,CT,59,2,Hartford,Wethersfield,Wethersfield Cove,41.72423986,-72.65828691,10/9/2021,Unknown,600,37,44,90
+CTCAG01,Y,Y,Y,Y,CAGO,M,CT,59,2,New London,Lebanon,Unknown,41.6361364,-72.21289822,10/11/2021,Unknown,4812,55,96,128
+CTCAG02,Y,Y,Y,Y,CAGO,M,CT,59,3,Windham,Putnam,Unknown,,,10/13/2021,Unknown,4653,55,94,119
+CTAGWT2,Y,Y,N,Y,AGWT,Unknown,CT,59,2,Hartford,Wethersfield,Unknown,41.70711368,-72.62240532,10/14/2021,Unknown,Unknown,Unknown,Unknown,Unknown
+CTMALL1,Y,Y,Y,Y,MALL,F,CT,59,2,Middlesex,East Haddam,Moodus Reservoir,41.50357485,-72.40353597,10/14/2021,Unknown,1349,54,57,120
+CTABD01,Y,Y,Y,Y,ABDU,M,CT,58,1,Litchfield,Riverton,Hogsback Reservoir,42.00365732,-73.03144978,11/17/2021,Unknown,1316,59,61,121
+CTABD02,Y,Y,Y,Y,ABDU,M,CT,59,2,New Haven,Milford,Nells Island,41.1843685,-73.11634804,11/17/2021,Unknown,1452,59,60,119
+CTAGWT3,Y,Y,N,Y,AGWT,M,CT,59,2,New Haven,Milford,Nells Island,41.1843685,-73.11634804,11/17/2021,Unknown,410,39,39,83
+CTAGWT1,Y,Y,Y,Y,AGWT,F,CT,58,1,Litchfield,Riverton,Hogsback Reservoir,42.00365732,-73.03144978,11/18/2021,Unknown,379,48,40,82
+CTWOD01,Y,Y,Y,Y,WODU,M,CT,59,3,Fairfield,Monroe,Unknown,,,11/18/2021,Unknown,676,37,45,89
+CTMALL3,Y,Y,Y,Y,MALL,M,CT,59,3,Windham,Eastford,Papineau Marsh,41.86485294,-72.08154553,11/25/2021,Unknown,1410,54,57,116
+CTCAG03,Y,Y,Y,Y,CAGO,M,CT,59,1,Tolland,Andover,Unknown,41.73725705,-72.37036,12/28/2021,Unknown,11313,54,96,124
+CTABD03,N,Y,Y,Y,ABDU,Unknown,CT,Unknown,Unknown,Unknown,Unknown,Unknown,,,,Unknown,Unknown,Unknown,Unknown,Unknown
+NJ_AGWT_01_AD,Y,Y,Y,Y,AGWT,M,NJ,64,2,Hudson,Secaucus,Hackensack River,40.80914738,-74.04078696,10/16/2021,Adult,480,37.1,35.5,Unknown
+NJ_MALL_40_AD,Y,Y,Y,Y,MALL,M,NJ,64,2,Hudson,Secaucus,Hackensack River,40.80914738,-74.04078696,10/16/2021,Adult,1350,52.8,46.1,Unknown
+NJ_WODU_01_JK,Y,Y,Y,Y,WODU,M,NJ,67,1,Sussex,Lafayette,Hyper Humus Marshes,41.07898108,-74.71564934,10/16/2021,Adult,690,32.2,39.1,Unknown
+NJ_WODU_02_AD,Y,Y,Y,Y,WODU,M,NJ,58,1,Warren,Hope,Jenny Jump State Forest,40.91344763,-74.92295983,10/18/2021,Adult,640,32.6,41.4,Unknown
+NJ_WODU_03_AD,Y,Y,Y,Y,WODU,F,NJ,64,1,Hunterdon,Hampton,Clinton WMA,40.65365613,-74.96428722,10/19/2021,Adult,600,32.7,40.7,Unknown
+NJ_ABDU_02_LC,Y,Y,Y,Y,ABDU,F,NJ,63/84,1,Cape May,Dennisville,Dennis Creek,39.15779362,-74.86829982,10/23/2021,Adult,1100,54.3,45.7,Unknown
+NJ_AGWT_01_LC,Y,Y,Y,Y,AGWT,M,NJ,63/84,1,Cape May,Dennisville,Dennis Creek,39.15779362,-74.86829982,10/23/2021,Adult,365,35.7,30.1,Unknown
+NJ_AGWT_02_AD,Y,Y,N,Y,AGWT,F,NJ,63/84,3,Salem,Canton,Mad Horse Creek,39.4372806,-75.4465829,10/23/2021,Adult,330,35.5,28.7,Unknown
+NJ_AGWT_02_NJ,Y,Y,N,Y,AGWT,Unknown,NJ,63/84,2,Cumberland,Port Norris,Hanseys Creek Boat Launch,39.2389939,-75.09554857,10/23/2021,Unknown,Unknown,Unknown,Unknown,Unknown
+NJ_WODU_01_AD,Y,Y,Y,Y,WODU,M,NJ,63/84,3,Salem,Canton,Mad Horse Creek,39.4372806,-75.4465829,10/23/2021,Adult,560,34.3,35.9,Unknown
+NJ_WODU_03_LC,Y,Y,Y,Y,WODU,M,NJ,63/84,2,Cumberland,Port Elizabeth,Menantico River,39.40600974,-74.97795006,10/23/2021,Adult,545,30,35.8,Unknown
+NJ_WODU_01_TN,Y,Y,Y,Y,WODU,M,NJ,63/84,1,Atlantic,Weymouth,Great Egg Harbor River ,39.42574179,-74.72704326,10/27/2021,Adult,720,32.7,36.8,Unknown
+NJ_ABDU_01_AD,Y,Y,Y,Y,ABDU,M,NJ,63/84,2,Cumberland,Port Norris,Turkey Point Boat Ramp,39.24619074,-75.13016896,10/30/2021,Adult,1100,52.5,45.9,Unknown
+NJ_MALL_10_AD,Y,Y,Y,Y,MALL,M,NJ,63/84,2,Atlantic,Brigantine,Forsythe NWR,39.46503266,-74.45028011,11/24/2021,Adult,1310,53.9,46.7,Unknown
+NJ_MALL_11_AD,Y,Y,Y,Y,MALL,M,NJ,67,3,Warren,Knowlton Township,Delaware Lake,40.91979329,-75.06674018,12/10/2021,Adult,1410,55,45.9,Unknown
+NJ_CAGO_01_AD,Y,Y,Y,Y,CAGO,M,NJ,63/84,2,Gloucester,Logan,Birch Creek,39.7931687,-75.3893586,12/22/2021,Adult,4090,52.9,87.5,Unknown
+NJ_MALL_01_AD,Y,Y,Y,Y,MALL,M,NJ,63/84,2,Gloucester,Logan,Birch Creek,39.7931687,-75.3893586,12/22/2021,Adult,1280,57.1,45.5,Unknown
+NJ_WODU_11_AD,Y,Y,Y,Y,WODU,M,NJ,58,1,Morris,Mount Oliver,Allamuchy Mountain State Park,40.92277421,-74.740237,12/29/2021,Adult,610,36.3,33.3,Unknown
+NJ_ABDU_30_AD,Y,Y,Y,Y,ABDU,M,NJ,58,1,Warren,Franklin Township,Musconetcong WMA,40.59838571,-75.17524567,1/7/2022,Adult,1210,53,45.3,Unknown
+NJ_MALL_30_AD,Y,Y,Y,Y,MALL,M,NJ,58,1,Morris,Mount Olive,Musconetcong River,40.88951324,-74.79318888,1/13/2022,Adult,1320,53,56,Unknown
+NJ_CAGO_30_AD,Y,Y,Y,Y,CAGO,M,NJ,67,3,Warren,Hackettstown,Hackettstown Fish Hatchery,40.84219116,-74.8336811,1/26/2022,Adult,4850,60,96.9,Unknown
+NJ_MALL_60_AD,Y,Y,Y,Y,MALL,F,NJ,64,3,Somerset,Basking Ridge,Great Swamp NWR,40.71997075,-74.5258147,2/15/2022,Adult,1130,Unknown,44.1,Unknown
+1 NY,Y,Y,Y,Y,AGWT,Unknown,NY,83,3,Jefferson,Pamelia,Perch River WMA Vaadi Road,44.0831549,-75.97405968,10/3/2021,Unknown,Unknown,Unknown,Unknown,Unknown
+21-1,Y,Y,Y,Y,WODU,M,NY,83,1,Cayuga,Mentz,Unknown,43.06034093,-76.63156686,10/3/2021,Adult,Unknown,Unknown,Unknown,Unknown
+998-1,Y,Y,Y,Y,AGWT,M,NY,83,3,Jefferson,Perch River,Perch River WMA Lower Pool,44.07455309,-75.99679479,10/3/2021,Adult,Unknown,Unknown,Unknown,Unknown
+26-2,Y,Y,Y,Y,MALL,M,NY,83,3,St. Lawrence,Waddington,Unknown,44.88078471,-75.16328202,10/7/2021,Adult,Unknown,Unknown,Unknown,Unknown
+34-1,Y,Y,Y,Y,MALL,F,NY,58,3,Clinton,Lyon Mountain,"142-502 Sunset Rd, Lyon Mountain NY",44.73091206,-73.92528655,10/8/2021,Adult,Unknown,Unknown,Unknown,Unknown
+49-1,Y,Y,Y,Y,ABDU,M,NY,83,1,St. Lawrence,Canton,Unknown,44.61057773,-75.24027161,10/8/2021,Adult,Unknown,Unknown,Unknown,Unknown
+57-1,Y,Y,Y,Y,MALL,M,NY,83,1,Essex,Westport,Cole Island,44.14144,-73.42124,10/13/2021,Adult,Unknown,Unknown,Unknown,Unknown
+58-1,Y,Y,Y,Y,CAGO,Unknown,NY,83,1,Essex,Westport,Cole Island,44.14144,-73.42124,10/13/2021,Adult,Unknown,Unknown,Unknown,Unknown
+6,Y,Y,Y,Y,MALL,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/16/2021,Unknown,Unknown,Unknown,Unknown,Unknown
+69-1,Y,Y,Y,Y,WODU,M,NY,58,2,Columbia,Ancram,New Forge Road,42.11115352,-73.6742602,10/16/2021,Juvenile,Unknown,Unknown,Unknown,Unknown
+70-1,Y,Y,Y,Y,MALL,M,NY,83,3,Monroe,Greece,"Maniton Road, Braddocks Bay, Hilton ",43.31357168,-77.72206721,10/16/2021,Adult,Unknown,Unknown,Unknown,Unknown
+74-1,Y,Y,Y,Y,WODU,M,NY,83,2,Schoharie,Carlisle,Schoolhouse Road,42.77181834,-74.49557852,10/16/2021,Adult,Unknown,Unknown,Unknown,Unknown
+77-1,Y,Y,Y,Y,MALL,M,NY,59,2,Ulster,"Ulster Park, Rosendale",Creek Locks Road,41.85410519,-74.04613227,10/18/2021,Adult,Unknown,Unknown,Unknown,Unknown
+1,Y,N,N,Y,WODU,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/19/2021,Unknown,Unknown,Unknown,Unknown,Unknown
+3,Y,N,Y,Y,MALL,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/19/2021,Unknown,Unknown,Unknown,Unknown,Unknown
+7,Y,Y,Y,Y,WODU,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/19/2021,Unknown,Unknown,Unknown,Unknown,Unknown
+9,N,Y,Y,Y,MALL,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/19/2021,Unknown,Unknown,Unknown,Unknown,Unknown
+82-1,Y,Y,Y,Y,ABDU,M,NY,67,2,Ulster,Hurley,Wynkoop Road,41.92671586,-74.07058815,10/20/2021,Adult,Unknown,Unknown,Unknown,Unknown
+2,Y,Y,Y,Y,WODU,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/21/2021,Unknown,Unknown,Unknown,Unknown,Unknown
+4,Y,Y,Y,Y,MALL,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/21/2021,Unknown,Unknown,Unknown,Unknown,Unknown
+8,Y,Y,Y,Y,WODU,Unknown,NY,60,1,Wyoming,Arcade,5859 Stinson Road,42.61532964,-78.35637708,10/21/2021,Unknown,Unknown,Unknown,Unknown,Unknown
+84-1,Y,Y,Y,Y,AGWT,F,NY,83,1,Seneca,Tyre,Montezuma National Wildlife Refuge - Tschache Pool,42.99548705,-76.78190343,10/21/2021,Adult,Unknown,Unknown,Unknown,Unknown
+87-1,Y,Y,Y,Y,WODU,M,NY,58,2,Columbia,Ancram,New Forge Road,42.11446958,-73.66988471,10/22/2021,Adult,Unknown,Unknown,Unknown,Unknown
+89-1,Y,Y,Y,Y,MALL,M,NY,58,2,Columbia,Copake,16 Mallard Drive,42.15018215,-73.59218239,10/23/2021,Adult,Unknown,Unknown,Unknown,Unknown
+94-2,N,Y,N,Y,CAGO,Unknown,NY,60,2,Ulster,West Hurley,Spillway Road,41.94259572,-74.14590836,10/23/2021,Adult,Unknown,Unknown,Unknown,Unknown
+94-3,Y,Y,Y,Y,CAGO,Unknown,NY,60,2,Ulster,West Hurley,Spillway Road,41.94259572,-74.14590836,10/23/2021,Adult,Unknown,Unknown,Unknown,Unknown
+95-1,Y,Y,Y,Y,MALL,M,NY,60,2,Chenango,Greene,Chenango River,42.34547258,-75.73785811,10/23/2021,Adult,Unknown,Unknown,Unknown,Unknown
+96-2,N,Y,Y,Y,AGWT,F,NY,83,2,Scoharie,Sharon,White Road,42.78977208,-74.54596062,10/23/2021,Adult,Unknown,Unknown,Unknown,Unknown
+103-1,Y,Y,N,Y,CAGO,Unknown,NY,83,1,Cayuga,Aurelius,Unknown,42.9293813,-76.65463515,10/24/2021,Adult,Unknown,Unknown,Unknown,Unknown
+103-2,Y,N,N,N,AGWT,Unknown,NY,83,1,Cayuga,Aurelius,Unknown,42.9293813,-76.65463515,10/24/2021,Adult,Unknown,Unknown,Unknown,Unknown
+11-1,Y,Y,Y,Y,ABDU,Unknown,NY,83,1,Niagara,Royalton,West Ruddy Marsh Tonawanda WMA,43.12304632,-78.48756199,10/26/2021,Unknown,Unknown,Unknown,Unknown,Unknown
+11-2,Y,Y,Y,Y,ABDU,Unknown,NY,83,1,Niagara,Royalton,West Ruddy Marsh Tonawanda WMA,43.12304632,-78.48756199,10/26/2021,Unknown,Unknown,Unknown,Unknown,Unknown
+119-4,Y,Y,Y,Y,WODU,F,NY,61/62,1,Cattaraugus,Conewango Valley,Conewango Swamp,42.19054663,-79.02534857,10/31/2021,Adult,Unknown,Unknown,Unknown,Unknown
+132-1,Y,Y,Y,Y,MALL,M,NY,60,3,Erie,East Concord,10004 Allen Road,42.57557005,-78.62546495,11/3/2021,Adult,Unknown,Unknown,Unknown,Unknown
+136-1,Y,Y,Y,Y,ABDU,Unknown,NY,83,2,Monroe,Wheatland,Scottsville,43.02357099,-77.73627261,11/4/2021,Adult,Unknown,Unknown,Unknown,Unknown
+138-1,Y,Y,Y,Y,CAGO,Unknown,NY,67,2,Ulster,Hurley,Wynkoop Road,41.93211164,-74.0640972,11/5/2021,Adult,Unknown,Unknown,Unknown,Unknown
+138-3,Y,Y,N,Y,CAGO,Unknown,NY,67,2,Ulster,Hurley,Wynkoop Road,41.93211164,-74.0640972,11/5/2021,Adult,Unknown,Unknown,Unknown,Unknown
+158-1,N,Y,Y,Y,WODU,M,NY,59,1,Rensselaer,Castleton on Hudson,Staats Island Road,42.57592187,-73.74310701,11/5/2021,Adult,Unknown,Unknown,Unknown,Unknown
+150-1,Y,Y,Y,Y,ABDU,M,NY,67,2,Ulster,Hurley,Wynkoop Road,41.92677972,-74.07320598,11/17/2021,Adult,Unknown,Unknown,Unknown,Unknown
+161-1,Y,N,N,Y,ABDU,Unknown,NY,60,3,Onondaga,Manlius,8500 US-20,42.92364,-75.9403,11/24/2021,Adult,Unknown,Unknown,Unknown,Unknown
+177-1,Y,Y,Y,Y,MALL,M,NY,63/84,1,Suffolk,"Amity Harbor, Babylon",Southeast Sand Island,40.6396141,-73.41084014,11/28/2021,Adult,Unknown,Unknown,Unknown,Unknown
+190-1A,Y,Y,Y,Y,MALL,M,NY,60,3,Onondaga,Jamesville,3310 Apulia Road,42.93130057,-76.06360818,12/10/2021,Adult,Unknown,Unknown,Unknown,Unknown
+190-1B,Y,Y,Y,Y,MALL,M,NY,60,3,Onondaga,Jamesville,3310 Apulia Road,42.93130057,-76.06360818,12/10/2021,Adult,Unknown,Unknown,Unknown,Unknown
+10,Y,Y,Y,Y,ABDU,Unknown,NY,83,2,Onondaga,Geddes,Onandaga Lake,43.09130038,-76.21063624,12/25/2021,Unknown,Unknown,Unknown,Unknown,Unknown
+37-2,Y,Y,Y,Y,WODU,M,PA,64,2,York,Washington Township,Shippensburg Road,40.00389121,-77.00107602,10/9/2021,Adult,Unknown,Unknown,Unknown,Unknown
+41-1,Y,Y,Y,Y,AGWT,F,PA,60,3,Wayne,Honesdale,"1797 Upper Woods Rd, Cold Springs ",41.75482747,-75.2881477,10/9/2021,Adult,Unknown,Unknown,Unknown,Unknown
+46-1,Y,Y,Y,Y,WODU,M,PA,61/62,3,Mercer,Jackson Center,"State Gamelands No 130, Jackson Center Polk Rd",41.29430484,-80.0990061,10/11/2021,Adult,Unknown,Unknown,Unknown,Unknown
+MC-2,Y,Y,Y,Y,AGWT,M,PA,64,1,Lebanon,Klienfeltersville,Middle Creek,40.293479,-76.239054,10/12/2021,Adult,352,36,34,82
+53-1,Y,Y,Y,Y,MALL,M,PA,67,1,Lebanon,North Cornwall Township,Unknown,40.30018619,-76.42824773,10/13/2021,Adult,Unknown,Unknown,Unknown,Unknown
+62-3,Y,Y,Y,Y,WODU,M,PA,61/62,2,Lawrence,New Castle,Unknown,40.96172411,-80.37703404,10/13/2021,Adult,Unknown,Unknown,Unknown,Unknown
+64-1,Y,Y,Y,Y,WODU,M,PA,61/62,3,Erie,Waterford,"State Gamelands No 109, Donation Road",42.00113346,-79.99687948,10/14/2021,Adult,Unknown,Unknown,Unknown,Unknown
+72-1,Y,Y,Y,Y,MALL,M,PA,67,2,Lebanon,Bethel Township,Unknown,40.40575203,-76.38036867,10/16/2021,Adult,1315,57.7,57.4,125.8
+131-1,Y,Y,Y,Y,MALL,M,PA,61/62,1,Lawrence,New Castle,"State Gamelands No 178, Valley Road",41.05404019,-80.31558411,10/17/2021,Adult,Unknown,Unknown,Unknown,Unknown
+86-1,Y,Y,Y,Y,WODU,M,PA,61/62,1,Crawford,South Shenango Township,"Fitch Road, Westford",41.54605682,-80.46324975,10/22/2021,Adult,Unknown,Unknown,Unknown,Unknown
+98-1,Y,Y,Y,Y,WODU,M,PA,60,2,Tioga,Lawrence Township,Tioga-Hammond Reservoir,41.94161951,-77.19578955,10/23/2021,Adult,Unknown,Unknown,Unknown,Unknown
+122-1,Y,Y,Y,Y,CAGO,M,PA,61/62,2,Crawford,Hartstown,"State Gamelands No 214, Pymatuning WMA, Hartstown Road",41.60264293,-80.41748605,11/1/2021,Adult,Unknown,Unknown,Unknown,Unknown
+123-1,Y,Y,Y,Y,MALL,M,PA,61/62,2,Crawford,"Pine Township, Linseville",Linesville area L,41.62789941,-80.3984316,11/1/2021,Adult,Unknown,Unknown,Unknown,Unknown
+128-1,Y,Y,Y,Y,CAGO,M,PA,83,3,Erie,East Springfield ,"State Gamelands No 314, Elmwood Home Road",41.9719465,-80.47351223,11/3/2021,Adult,Unknown,Unknown,Unknown,Unknown
+142-1,Y,Y,Y,Y,ABDU,Unknown,PA,61/62,2,Crawford,"Pine Township, Linseville",Linesville,41.62926518,-80.40906856,11/8/2021,Adult,1045,53,51.9,110.7
+148-1,Y,Y,Y,Y,AGWT,M,PA,61/62,2,Crawford,"Pine Township, Linseville",Linesville area L,41.6265853,-80.40848118,11/12/2021,Adult,Unknown,Unknown,Unknown,Unknown
+999-1,Y,Y,Y,Y,ABDU/MALL,F,PA,64,1,Lancaster,Brownstown,Becker Road,40.12628109,-76.24761643,11/25/2021,Unknown,1150,50.3,48.6,105.9
+184-1,Y,Y,Y,Y,MALL,M,PA,69/70,3,Beaver,Ellwood City,103 Pullman Station,40.83188241,-80.25149123,12/7/2021,Adult,Unknown,Unknown,Unknown,Unknown
+184-2,Y,Y,Y,Y,MALL,F,PA,69/70,3,Beaver,Ellwood City,103 Pullman Station,40.83188241,-80.25149123,12/7/2021,Adult,Unknown,Unknown,Unknown,Unknown
+197-1,Y,Y,Y,Y,ABDU,Unknown,PA,63/84,3,Bucks,"Falls Township, Morrisville",Penn Warner Club,40.12582756,-74.7907252,12/16/2021,Adult,1228.7,55.7,55.2,118.8
+205-1,Y,Y,Y,Y,MALL,M,PA,64,1,Lancaster,Leola,308 Becker Road,40.13065285,-76.24999864,12/24/2021,Adult,1440,58,42.6,119
+206-1,Y,Y,Y,Y,CAGO,Unknown,PA,63/84,3,Bucks,"Falls Township, Morrisville",Penn Warner Club,40.13107282,-74.78250565,12/24/2021,Adult,Unknown,Unknown,Unknown,Unknown
+209-1,Y,Y,Y,Y,MALL,M,PA,63/84,3,Bucks,"Falls Township, Morrisville",Penn Warner Club,40.13204318,-74.78880269,12/31/2021,Adult,1466.3,53.9,54.2,117.3
+209-2,Y,Y,Y,Y,CAGO,Unknown,PA,63/84,3,Bucks,"Falls Township, Morrisville",Penn Warner Club,40.13204318,-74.78880269,12/31/2021,Adult,4988.8,56.8,91.1,129
+210-1,Y,Y,Y,Y,CAGO,Unknown,PA,67,1,Huntingdon,Orbisonia,442 Ridgley Street,40.24339,-77.89381,12/31/2021,Adult,Unknown,Unknown,Unknown,Unknown
+213-2,Y,Y,Y,Y,CAGO,Unknown,PA,61/62,1,Lawrence,"New Castle, Mahoningtown",Cherry Street Bridge,40.9744959,-80.3630094,1/4/2022,Adult,Unknown,Unknown,Unknown,Unknown
+216-1,Y,Y,Y,Y,CAGO,Unknown,PA,61/62,3,Erie,Greenfield Township,Wildman Road,42.09105897,-79.83033892,1/6/2022,Adult,Unknown,Unknown,Unknown,Unknown
+219-01,Y,Y,Y,Y,ABDU,Unknown,PA,61/62,1,Lawrence,"Mahoning Towship, Hillsville","Mahoning River, Hillsville",41.02863733,-80.51084048,1/10/2022,Adult,Unknown,Unknown,Unknown,Unknown
