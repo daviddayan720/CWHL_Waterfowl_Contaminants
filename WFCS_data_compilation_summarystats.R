@@ -64,6 +64,71 @@ summary_stats_conc <- processed_concentrations %>%
 # Print the csv file for summary of concentrations.
 write_csv(summary_stats_conc, "WFCS_concentration_summary_stats.csv")
 
+#make a dataframe for summary stats of dioxins
+summary_dioxins <-  processed_concentrations %>% 
+  select(1, 3:28) %>% 
+  pivot_longer(cols = -ID, names_to = "Contaminant", values_to = "Concentration") %>%
+  group_by(Contaminant) %>%
+  summarize(
+    Min = signif(min(Concentration, na.rm = TRUE), digits = 3),
+    Max = signif(max(Concentration, na.rm = TRUE), digits = 3),
+    Median = signif(median(Concentration, na.rm = TRUE), digits = 3),
+    Mean = signif(mean(Concentration, na.rm = TRUE), digits = 3),
+    DF = signif(mean(Concentration > 0, na.rm = TRUE) * 100, digits = 3),
+    N_tested = sum(!is.na(Concentration))
+  )
+
+write.csv(summary_dioxins, "Dioxin summary stats.csv")
+
+#make a dataframe for summary stats of PCBs
+summary_PCBs <- processed_concentrations %>% 
+  select(1, 29:206) %>% 
+  pivot_longer(cols = -ID, names_to = "Contaminant", values_to = "Concentration") %>%
+  group_by(Contaminant) %>%
+  summarize(
+    Min = signif(min(Concentration, na.rm = TRUE), digits = 3),
+    Max = signif(max(Concentration, na.rm = TRUE), digits = 3),
+    Median = signif(median(Concentration, na.rm = TRUE), digits = 3),
+    Mean = signif(mean(Concentration, na.rm = TRUE), digits = 3),
+    DF = signif(mean(Concentration > 0, na.rm = TRUE) * 100, digits = 3),
+    N_tested = sum(!is.na(Concentration))
+  )
+
+write.csv(summary_PCBs, "PCB summary stats.csv")  
+
+#make a dataframe for summary stats of OCPs
+summary_OCPs <- processed_concentrations %>% 
+  select(1, 207:234) %>% 
+  pivot_longer(cols = -ID, names_to = "Contaminant", values_to = "Concentration") %>%
+  group_by(Contaminant) %>%
+  summarize(
+    Min = signif(min(Concentration, na.rm = TRUE), digits = 3),
+    Max = signif(max(Concentration, na.rm = TRUE), digits = 3),
+    Median = signif(median(Concentration, na.rm = TRUE), digits = 3),
+    Mean = signif(mean(Concentration, na.rm = TRUE), digits = 3),
+    DF = signif(mean(Concentration > 0, na.rm = TRUE) * 100, digits = 3),
+    N_tested = sum(!is.na(Concentration))
+  )
+
+write.csv(summary_OCPs, "OCP summary stats.csv")
+
+# make a dataframe for summary stats of PFAS
+summary_PFAS <- processed_concentrations %>% 
+  select(1, 235:274) %>% 
+  pivot_longer(cols = -ID, names_to = "Contaminant", values_to = "Concentration") %>%
+  group_by(Contaminant) %>%
+  summarize(
+    Min = signif(min(Concentration, na.rm = TRUE), digits = 3),
+    Max = signif(max(Concentration, na.rm = TRUE), digits = 3),
+    Median = signif(median(Concentration, na.rm = TRUE), digits = 3),
+    Mean = signif(mean(Concentration, na.rm = TRUE), digits = 3),
+    DF = signif(mean(Concentration > 0, na.rm = TRUE) * 100, digits = 3),
+    N_tested = sum(!is.na(Concentration))
+  )
+
+write.csv(summary_PFAS, "PFAS summary stats.csv")
+
+
 # Make a vector with contaminants for the table in the main text.
 contaminants_to_select <- c("Hg", "TEQ", "TPCBs", "HCH, gamma", "Heptachlor Epoxide", "Aldrin", "PFOS", "PFOA", "PFNA")
 
