@@ -12,4 +12,4 @@ Run R files in the order listed below and clear environment between files.
 2. WFCS_sample_sizes.R
 3. WFCS_data_compilation_summarystats.R
 4. WFCS_deterministic_risk_assessment_statanalysis.R
-5. probabilistic_risk_assessment.R
+5. WFCS_probabilistic_risk_assessment.R
