@@ -22,10 +22,10 @@
 # --------------------------------------------
 
 # Load required packages.
-library(tidyverse)
-library(knitr)
+library(tidyverse) # Version 2.0.0.
+library(knitr)	# Version 1.43.
 
-#load metadata
+# Load metadata.
 metadata <- read_csv("Waterfowl Contaminant Study Sample Collection Metadata 2021-2022.csv")
 
 # Load processed data.
@@ -42,7 +42,7 @@ contaminant_df <- Reduce(function(x, y) merge(x, y, by = "ID", all = TRUE), list
 # Make a data frame with only concentrations.
 processed_concentrations <- contaminant_df %>% select(-matches("HQ|EPA|CR"))
 
-#merge concentration data with metadata
+# Merge concentration data with metadata.
 concentrations_metadata <- merge(metadata, processed_concentrations, by = "ID", all = TRUE)
 
 # Print the csv file of all concentrations.
@@ -64,7 +64,7 @@ summary_stats_conc <- processed_concentrations %>%
 # Print the csv file for summary of concentrations.
 write_csv(summary_stats_conc, "WFCS_concentration_summary_stats.csv")
 
-#make a dataframe for summary stats of dioxins
+# Make a dataframe for summary stats of dioxins.
 summary_dioxins <-  processed_concentrations %>% 
   select(1, 3:28) %>% 
   pivot_longer(cols = -ID, names_to = "Contaminant", values_to = "Concentration") %>%
@@ -78,9 +78,10 @@ summary_dioxins <-  processed_concentrations %>%
     N_tested = sum(!is.na(Concentration))
   )
 
+# Write the csv file.
 write.csv(summary_dioxins, "Dioxin summary stats.csv")
 
-#make a dataframe for summary stats of PCBs
+# Make a dataframe for summary stats of PCBs.
 summary_PCBs <- processed_concentrations %>% 
   select(1, 29:206) %>% 
   pivot_longer(cols = -ID, names_to = "Contaminant", values_to = "Concentration") %>%
@@ -94,9 +95,10 @@ summary_PCBs <- processed_concentrations %>%
     N_tested = sum(!is.na(Concentration))
   )
 
-write.csv(summary_PCBs, "PCB summary stats.csv")  
+# Write the csv file.
+write.csv(summary_PCBs, "PCB summary stats.csv")
 
-#make a dataframe for summary stats of OCPs
+# Make a dataframe for summary stats of OCPs.
 summary_OCPs <- processed_concentrations %>% 
   select(1, 207:234) %>% 
   pivot_longer(cols = -ID, names_to = "Contaminant", values_to = "Concentration") %>%
@@ -110,9 +112,10 @@ summary_OCPs <- processed_concentrations %>%
     N_tested = sum(!is.na(Concentration))
   )
 
+# Write the csv file.
 write.csv(summary_OCPs, "OCP summary stats.csv")
 
-# make a dataframe for summary stats of PFAS
+# Make a dataframe for summary stats of PFAS.
 summary_PFAS <- processed_concentrations %>% 
   select(1, 235:274) %>% 
   pivot_longer(cols = -ID, names_to = "Contaminant", values_to = "Concentration") %>%
@@ -126,8 +129,8 @@ summary_PFAS <- processed_concentrations %>%
     N_tested = sum(!is.na(Concentration))
   )
 
+# Write the csv file.
 write.csv(summary_PFAS, "PFAS summary stats.csv")
-
 
 # Make a vector with contaminants for the table in the main text.
 contaminants_to_select <- c("Hg", "TEQ", "TPCBs", "HCH, gamma", "Heptachlor Epoxide", "Aldrin", "PFOS", "PFOA", "PFNA")
