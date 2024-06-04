@@ -57,7 +57,15 @@ TAGNO_mismatch <- mercury2 %>%
 # examples: 
 # B921078_1 corresponds to ID 1
 # B921078_2 corresponds to ID 2
-wrong_TAGNO <- c(TAGNO_mismatch$TAGNO)
+wrong_TAGNO <- c("NJ_MALL_60AD", "NJ_MALL_10AD", "NJ_ABDU_02LC", 
+                 "NJ_AGWT_01LC", "NJ_ABDU_30AD", "NJ_CAGO_30AD", 
+                 "NJ_WODU_03AD", "NJ_WODU_02AD", "NJ_MALL_11AD", 
+                 "NJ_WODU_01JK", "NJ_CAGO_01AD", "NJ_MALL_01AD", 
+                 "NJ_AGWT_02AD", "NJ_WODU_01AD", "NJ_MALL_30AD", 
+                 "NJ_WODU_11AD", "NJ_WODU_03LC", "NJ_ABDU_01AD", 
+                 "NJ_AGWT_01AD", "NJ_WODU_01TN", "NJ_AGWT_02NJ",
+                 "B921078_1","B921077_2", "B921074_6", "B921076_7", "B921079_8") 
+                 
 right_ID <- c("NJ_MALL_60_AD", "NJ_MALL_10_AD", "NJ_ABDU_02_LC", 
               "NJ_AGWT_01_LC", "NJ_ABDU_30_AD", "NJ_CAGO_30_AD", 
               "NJ_WODU_03_AD", "NJ_WODU_02_AD", "NJ_MALL_11_AD", 
@@ -122,3 +130,4 @@ Hg_processed <- Hg_HQ %>%
 
 # Write the csv file.
 write_csv(Hg_processed, "WFCS_Hg_processed.csv")
+
