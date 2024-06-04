@@ -21,9 +21,9 @@
 # --------------------------------------------
 
 # Load required packages.
-library(tidyverse)
-library(knitr)
-library(fitdistrplus)
+library(tidyverse) # Version 2.0.0
+library(knitr)	# Version 1.43
+library(fitdistrplus) # Version 1.1.11
 
 # To ensure reproducibility.
 set.seed(720)
@@ -44,11 +44,13 @@ HQ_TEQ_MEAL=HQ_TEQ/24
 summary(HQ_TEQ_MEAL)
 hist(HQ_TEQ_MEAL)
 
-# Note: There are only 4 zeros. Extreme J shape. See if we can transform the J shape to normal. Go up or down the roots to see if we can get the best fit RE diagnostics.
+# Note: There are only 4 zeros. Extreme J shape. 
+# See if we can transform the J shape to normal. 
+# Go up or down the roots to see if we can get the best fit RE: diagnostics.
 HQ_TEQ_MEAL_S=HQ_TEQ_MEAL^(1/5)
 hist(HQ_TEQ_MEAL_S)
 
-# Fit the transformed data.
+# Fit the transformed data to a normal distribution.
 fit_TEQ_HQ=fitdist(HQ_TEQ_MEAL_S, "norm")
 
 # Look at the fit metrics.
@@ -57,6 +59,7 @@ summary(fit_TEQ_HQ)
 
 # Look at the diagnostics.
 plot(fit_TEQ_HQ)
+
 # Save the plot as a PNG with 1000 dpi and 6in x 6in dimensions
 png("TEQ_HQ_diagnostics.png", width = 6.5, height = 6, units = "in", res = 1000)
 plot(fit_TEQ_HQ)  # Plot the diagnostics
@@ -75,11 +78,12 @@ CR_TEQ_MEAL=CR_TEQ/24
 summary(CR_TEQ_MEAL)
 hist(CR_TEQ_MEAL)
 
-# See if we can transform the J shape to normal. Go up or down the roots to see if we can get the best fit RE diagnostics.
+# See if we can transform the J shape to normal. 
+# Go up or down the roots to see if we can get the best fit RE diagnostics.
 CR_TEQ_MEAL_S=CR_TEQ_MEAL^(1/5)
 hist(CR_TEQ_MEAL_S)
 
-# Fit the transformed data.
+# Fit the transformed data to a normal distribution.
 fit_TEQ_CR=fitdist(CR_TEQ_MEAL_S, "norm")
 
 # Look at the fit metrics.
@@ -88,6 +92,7 @@ summary(fit_TEQ_CR)
 
 # Look at the diagnostics.
 plot(fit_TEQ_CR)
+
 # Save the plot as a PNG with 1000 dpi and 6in x 6in dimensions
 png("TEQ_CR_diagnostics.png", width = 6.5, height = 6, units = "in", res = 1000)
 plot(fit_TEQ_CR)  # Plot the diagnostics
@@ -162,11 +167,12 @@ HQ_TPCB_MEAL=HQ_TPCB/24
 summary(HQ_TPCB_MEAL)
 hist(HQ_TPCB_MEAL)
 
-# See if we can transform the J shape to normal. Go up or down the roots to see if we can get the best fit RE diagnostics.
+# See if we can transform the J shape to normal. 
+# Go up or down the roots to see if we can get the best fit RE diagnostics.
 HQ_TPCB_MEAL_S=HQ_TPCB_MEAL^(1/200)
 hist(HQ_TPCB_MEAL_S)
 
-# Fit the transformed data.
+# Fit the transformed data to a normal distribution.
 fit_TPCB_HQ=fitdist(HQ_TPCB_MEAL_S, "norm")
 
 # Look at the metrics of the fit.
@@ -194,7 +200,8 @@ CR_TPCB_MEAL=CR_TPCB/24
 summary(CR_TPCB_MEAL)
 hist(CR_TPCB_MEAL)
 
-# See if we can transform the J shape to normal. Go up or down the roots to see if we can get the best fit RE diagnostics.
+# See if we can transform the J shape to normal. 
+# Go up or down the roots to see if we can get the best fit RE diagnostics.
 CR_TPCB_MEAL_S=CR_TPCB_MEAL^(1/100)
 hist(CR_TPCB_MEAL_S)
 
@@ -271,7 +278,6 @@ colnames(TPCB_risks) <- c("num_samples", "mean_HQ", "percentile_95_HQ", "percent
 # Display results.
 view(TPCB_risks)
 
-
 #--------------------------------------------------------------------------
 # Fitting Sum_OCPs_HQ -----------------------------------------------------
 
@@ -285,11 +291,12 @@ Sum_OCPs_HQ_MEAL=Sum_OCPs_HQ/24
 summary(Sum_OCPs_HQ_MEAL)
 hist(Sum_OCPs_HQ_MEAL)
 
-# See if we can transform the J shape to normal. Go up or down the roots to see if we can get the best fit RE diagnostics.
+# See if we can transform the J shape to normal. 
+# Go up or down the roots to see if we can get the best fit RE diagnostics.
 Sum_OCPs_HQ_MEAL_S=Sum_OCPs_HQ_MEAL^(1/200)
 hist(Sum_OCPs_HQ_MEAL_S)
 
-# Fit the transformed data
+# Fit the transformed data to a normal distribution.
 fit_OCP_HQ=fitdist(Sum_OCPs_HQ_MEAL_S, "norm")
 
 # Look at the metrics of the fit. 
@@ -312,12 +319,15 @@ Sum_OCPs_CR_MEAL=Sum_OCPs_CR/24
 summary(Sum_OCPs_CR_MEAL)
 hist(Sum_OCPs_CR_MEAL)
 
-# See if we can transform the J shape to normal. Go up or down the roots to see if we can get the best fit RE diagnostics.
+# See if we can transform the J shape to normal. 
+# Go up or down the roots to see if we can get the best fit RE diagnostics.
 Sum_OCPs_CR_MEAL_S=Sum_OCPs_CR_MEAL^(1/300)
 hist(Sum_OCPs_CR_MEAL_S)
 
-# Fit the transformed data.
+# Fit the transformed data to the normal distribution.
 fit_OCP_CR=fitdist(Sum_OCPs_CR_MEAL_S, "norm")
+
+# Look at the metrics of the fit.
 gofstat(fit_OCP_CR)
 summary(fit_OCP_CR)
 
@@ -400,11 +410,12 @@ Sum_PFAS_HQ_MEAL=Sum_PFAS_HQ/24
 summary(Sum_PFAS_HQ_MEAL)
 hist(Sum_PFAS_HQ_MEAL)
 
-# See if we can transform the J shape to normal. Go up or down the roots to see if we can get the best fit RE diagnostics.
+# See if we can transform the J shape to normal. 
+# Go up or down the roots to see if we can get the best fit RE diagnostics.
 Sum_PFAS_HQ_MEAL_S=Sum_PFAS_HQ_MEAL^(1/5)
 hist(Sum_PFAS_HQ_MEAL_S)
 
-# Fit the transformed data.
+# Fit the transformed data to a normal distribution.
 fit_PFAS_HQ=fitdist(Sum_PFAS_HQ_MEAL_S, "norm")
 
 # Look at the fit metrics.
@@ -418,7 +429,6 @@ plot(fit_PFAS_HQ)
 png("PFAS_HI_diagnostics.png", width = 6.5, height = 6, units = "in", res = 1000)
 plot(fit_PFAS_HQ)  # Plot the diagnostics
 dev.off()  # Close the PNG device
-
 
 #--------------------------------------------------------------------------
 # Simulating PFAS Risk -----------------------------------------------------
@@ -477,11 +487,12 @@ Total_HI_MEAL=Total_HI/24
 summary(Total_HI_MEAL)
 hist(Total_HI_MEAL)
 
-# See if we can transform the J shape to normal. Go up or down the roots to see if we can get the best fit RE diagnostics.
+# See if we can transform the J shape to normal. 
+# Go up or down the roots to see if we can get the best fit RE diagnostics.
 Total_HI_MEAL_S=Total_HI_MEAL^(1/10)
 hist(Total_HI_MEAL_S)
 
-# Fit the transformed data.
+# Fit the transformed data to a normal distribution.
 fit_Total_HI=fitdist(Total_HI_MEAL_S, "norm")
 
 # Look at the metrics of the fit. 
@@ -496,7 +507,6 @@ png("Total_HI_diagnostics.png", width = 6.5, height = 6, units = "in", res = 100
 plot(fit_Total_HI)  # Plot the diagnostics
 dev.off()  # Close the PNG device
 
-
 #--------------------------------------------------------------------------
 # Total_CR -------------------------------------------------------------
 
@@ -510,11 +520,12 @@ Total_CR_MEAL=Total_CR/24
 summary(Total_CR_MEAL)
 hist(Total_CR_MEAL)
 
-# See if we can transform the J shape to normal. Go up or down the roots to see if we can get the best fit RE diagnostics.
+# See if we can transform the J shape to normal. 
+# Go up or down the roots to see if we can get the best fit RE diagnostics.
 Total_CR_MEAL_S=Total_CR_MEAL^(1/100)
 hist(Total_CR_MEAL_S)
 
-# Fit the transformed data.
+# Fit the transformed data to a normal distribution.
 fit_total_CR=fitdist(Total_CR_MEAL_S, "norm")
 
 # Look at the metrics of the fit.
