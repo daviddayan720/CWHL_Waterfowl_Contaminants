@@ -12,7 +12,7 @@
 # License: MIT
 # 
 # Description: This code includes the deterministic 
-#risk assessment, statistical analyses, and visualizations.
+# risk assessment, statistical analyses, and visualizations.
 # 
 # Funding: This work was supported under the project 
 # name 'Contaminant Loads in Waterfowl of the Northeast Atlantic
@@ -21,13 +21,13 @@
 #
 # --------------------------------------------
 
-# Load required pacakges.
-library(tidyverse)
-library(ggbreak)
-library(ggpubr)
-library(knitr)
-library(cowplot)
-library(dunn.test)
+# Load required packages.
+library(tidyverse) # Version 2.0.0
+library(ggbreak) # Version 0.1.2
+library(ggpubr) # Version 0.6.0
+library(knitr) # Version 1.43
+library(cowplot) # Version 1.1.3
+library(dunn.test) # Version 1.3.5
 
 # Load risk data.
 risk_data <- read_csv("WFCS_group_risk_levels.csv")
@@ -50,7 +50,9 @@ risk_data_merged$species <- factor(risk_data_merged$species,levels = c("MALL", "
 variables_to_test_HQ <- c("HQ_Hg", "HQ_TEQ", "HQ_TPCB", "Sum_OCPs_HQ", "Sum_PFAS_HQ", "Total_HI")
 
 # Compare the variables
-for (variable in variables_to_test_HQ) {result <- dunn.test(x = risk_data_merged[[variable]], g = risk_data_merged$species, method = "holm")}
+for (variable in variables_to_test_HQ) {
+  result <- dunn.test(x = risk_data_merged[[variable]], g = risk_data_merged$species, method = "holm")
+}
 
 # ---------------------------------------------------------------------------
 # Total HI by Species Histogram ---------------------------------------------
@@ -76,7 +78,7 @@ generate_breaks_labels <- function(max_value, bin_width, label_interval) {
 # Use the generate breaks labels function on the data.
 breaks_labels_HI <- generate_breaks_labels(max_value_HI, 0.25, 0.5)
 
-# Make a data frame of factors with significance labels from Dunn's Test 
+# Make a data frame of factors with significance labels from Dunn's Test.
 sig_labels_HI <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), label = c("a", "a", "a", "b", "b"))
 
 # Produce the plot.
@@ -87,8 +89,7 @@ Total_HI_histo <- risk_data_merged %>%
   geom_vline(xintercept = 1, linetype = "solid", color = "red") +
   scale_x_continuous(breaks = breaks_labels_HI$breaks, labels = breaks_labels_HI$labels) +
   facet_wrap(~ species, ncol = 1, strip.position = "left", labeller = as_labeller(label_species_HI)) +
-  labs(x = "Total Hazard Index",
-       y = "Sample Count") +
+  labs(x = "Total Hazard Index",y = "Sample Count") +
   scale_x_break(c(9.9, 36.5)) +
   theme_bw() +
   theme(panel.grid.major = element_blank(),
@@ -101,14 +102,13 @@ Total_HI_histo <- risk_data_merged %>%
 # Save the histogram.
 ggsave("Total_HI_by_species.png", plot = Total_HI_histo, dpi = 1000, width = 7.8, height = 5.83)
 
-
 # ---------------------------------------------------------------------------
 # Hg HQ by Species Histogram ------------------------------------------------
 
 # Calculate the number of non-NA values for each species.
 species_counts_Hg <- risk_data_merged %>% group_by(species) %>% summarize(count = sum(!is.na(HQ_Hg)))
 
-# Make a data frame of factors with significance labels from Dunn's Test
+# Make a data frame of factors with significance labels from Dunn's Test.
 sig_labels_Hg <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), label = c("bc", "a", "ab", "", "c"))
 
 # Create custom labeller function for facet labels.
@@ -142,7 +142,7 @@ ggsave("Hg_HQ_by_species.png", plot = Hg_HQ_histo, dpi = 1000, width = 7.8, heig
 
 max_value_TEQ <- max(risk_data_merged$HQ_TEQ, na.rm = TRUE) + 0.5
 
-# Calculate the number of non-NA values for each species
+# Calculate the number of non-NA values for each species.
 species_counts_TEQ <- risk_data_merged %>% group_by(species) %>% summarize(count = sum(!is.na(HQ_TEQ)))
 
 # Create custom labeler function for facet labels.
@@ -161,7 +161,7 @@ generate_breaks_labels_TEQ <- function(max_value, bin_width, label_interval) {
 # Apply helper function to data. 
 breaks_labels_TEQ <- generate_breaks_labels_TEQ(max_value_TEQ, 0.25, 0.5)
 
-# Make a data frame of factors with significance labels from Dunn's Test 
+# Make a data frame of factors with significance labels from Dunn's Test.
 sig_labels_TEQ <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), label = c("a", "a", "ab", "bc", "c"))
 
 # Produce the plot. 
@@ -172,8 +172,7 @@ TEQ_HQ_histo <- risk_data_merged %>%
   geom_vline(xintercept = 1, linetype = "solid", color = "red") +
   scale_x_continuous(breaks = breaks_labels_TEQ$breaks, labels = breaks_labels_TEQ$labels) +
   facet_wrap(~ species, ncol = 1, strip.position = "left", labeller = as_labeller(label_species_TEQ)) +
-  labs(x = "TCDD Toxic Equivalency Hazard Quotient",
-       y = "Sample Count") +
+  labs(x = "TCDD Toxic Equivalency Hazard Quotient",y = "Sample Count") +
   scale_x_break(c(4.9, 13.5)) +
   theme_bw() +
   theme(panel.grid.major = element_blank(),
@@ -222,8 +221,7 @@ PCB_HQ_histo <- risk_data_merged %>%
   geom_vline(xintercept = 1, linetype = "solid", color = "red") +
   scale_x_continuous(breaks = breaks_labels_TPCB$breaks, labels = breaks_labels_TPCB$labels) +
   facet_wrap(~ species, ncol = 1, strip.position = "left", labeller = as_labeller(label_species_TPCB)) +
-  labs(x = expression("\u03A3PCB Hazard Quotient"),
-       y = "Sample Count") +
+  labs(x = expression("\u03A3PCB Hazard Quotient"),y = "Sample Count") +
   scale_x_break(c(4.5, 20.5)) +
   theme_bw() +
   theme(panel.grid.major = element_blank(),
@@ -237,20 +235,19 @@ PCB_HQ_histo <- risk_data_merged %>%
 # Save the plot. 
 ggsave("PCB_HQ_by_species.png", plot = PCB_HQ_histo, dpi = 1000, width = 7.8, height = 5.83)
 
-
 # ---------------------------------------------------------------------------
 # OCPs HI by Species Histogram ----------------------------------------------
 
 # Calculate the number of non-NA values for each species.
 species_counts_OCP <- risk_data_merged %>% group_by(species) %>% summarize(count = sum(!is.na(Sum_OCPs_HQ)))
 
-# Create custom labeller function for facet labels.
+# Create custom labeler function for facet labels.
 label_species_OCP <- function(variable) {
   count <- species_counts_OCP$count[species_counts_OCP$species == variable]
   return(paste(variable, " (n=", count, ")", sep = ""))
 } # End labeler 
 
-# Make a data frame of factors with significance labels from Dunn's Test
+# Make a data frame of factors with significance labels from Dunn's Test.
 sig_labels_OCPs <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), label = c("ab", "a", "ab", "ab", "b"))
 
 # Produce the plot.
@@ -261,8 +258,7 @@ OCP_HI_histo <- risk_data_merged %>%
   geom_vline(xintercept = 1, linetype = "solid", color = "red") +
   scale_x_continuous(sec.axis = dup_axis(name = NULL), breaks = seq(0, 1.1, by = .05), labels = seq(0,1.1, by = .05)) +
   facet_wrap(~ species, ncol = 1, strip.position = "left", labeller = as_labeller(label_species_OCP)) +
-  labs(x = "OCPs Hazard Index",
-       y = "Sample Count") +
+  labs(x = "OCPs Hazard Index",y = "Sample Count") +
   theme_bw() +
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
@@ -296,7 +292,7 @@ generate_breaks_labels_PFAS <- function(max_value, bin_width, label_interval) {
   return(list(breaks = breaks, labels = labels))
 } # End create helper function. 
 
-# Make a data frame of factors with significance labels from Dunn's Test 
+# Make a data frame of factors with significance labels from Dunn's Test.
 sig_labels_PFAS <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), label = c("a", "ab", "a", "c", "bc"))
 
 # Apply the helper function to data.
@@ -310,8 +306,7 @@ PFAS_HI_histo <- risk_data_merged %>%
   geom_vline(xintercept = 1, linetype = "solid", color = "red") +
   scale_x_continuous(breaks = breaks_labels_PFAS$breaks, labels = breaks_labels_PFAS$labels) +
   facet_wrap(~ species, ncol = 1, strip.position = "left", labeller = as_labeller(label_species_PFAS)) +
-  labs(x = "PFAS Hazard Index",
-       y = "Sample Count") +
+  labs(x = "PFAS Hazard Index",y = "Sample Count") +
   theme_bw() +
   scale_x_break(c(2.3, 4.25))+
   theme(panel.grid.major = element_blank(),
@@ -634,7 +629,7 @@ ggsave("PFAS_CR_by_species.png", plot = PFAS_CR_combined, dpi = 1000, width = 10
 # List of variables.
 variables_of_interest_CR <- c("CR_TEQ", "CR_TPCB", "Sum_OCPs_CR", "Sum_PFAS_CR", "Total_CR") 
 
-# Create a new dataframe to store the statistics
+# Create a new dataframe to store the statistics.
 cancer_deterministic_summary <- data.frame(
   min = numeric(length(variables_of_interest_CR)),
   max = numeric(length(variables_of_interest_CR)),
