@@ -22,41 +22,41 @@
 # --------------------------------------------
 
 # Load required package.
-library(tidyverse)
+library(tidyverse) # Version 2.0.0.
 
-# Read in study metadata
+# Load study metadata.
 metadata <- read_csv("Waterfowl Contaminant Study Sample Collection Metadata 2021-2022.csv")
 
-# Read in PCB data from SGS AXYS
+# Load PCB data from SGS AXYS.
 PCBs <- read_csv("Waterfowl Muscle Tissue Polychlorinated Biphenyl Data from SGS AXYS 2021-2022.csv")
 
-# Split the PCB data based on SDG (sample batch identifier)
+# Split the PCB data based on SDG (sample batch identifier).
 PCB_list <- split(PCBs, PCBs$SDG, drop = TRUE)
 
-# Generate names for the list elements
+# Generate names for the list elements.
 names(PCB_list) <- paste0("PCB", seq_along(PCB_list))
-
-# Now, PCB_list has names like "PCB1", "PCB2", ..., "PCB5"
-
 PCB1 <- PCB_list[[1]]
 PCB2 <- PCB_list[[2]]
 PCB3 <- PCB_list[[3]]
 PCB4 <- PCB_list[[4]]
 PCB5 <- PCB_list[[5]]
 
-# Create a vector of data frame names
+# Create a vector of data frame names.
 PCB_dataframes <- c("PCB1", "PCB2", "PCB3", "PCB4", "PCB5")
 
-# Loop through each PCB Dataframe.
+# Loop through each PCB dataframe.
 for (i in seq_along(PCB_dataframes)) {
-  # Access data frame by name
+  
+  # Access data frame by name.
   raw_data <- get(PCB_dataframes[i])
   
-  # Subset columns, remove % Lipid and Moisture results, rename Sample_ID to ID
+  # Subset columns, remove % Lipid and Moisture results, rename Sample_ID to ID.
   raw_data <- raw_data %>% select(Sample_Type, Analyte, Result, Result_Qualifier, Detect, LOQ, Reporting_Limit, Sample_ID, Result_Unit ) %>% filter(!Analyte %in% c("% Lipid", "% Moisture")) %>% rename(ID = Sample_ID)
   
-  # Subset to get only blanks data with detectable signals
-  blanks_data <- raw_data %>% filter(Sample_Type == "BLANK") %>% filter(Detect == "Y") %>% select(Analyte, Result) %>% rename(blank_result = Result)
+  # Subset to get only blanks data with detectable signals.
+  blanks_data <- raw_data %>% filter(Sample_Type == "BLANK") %>% 
+    filter(Detect == "Y") %>% select(Analyte, Result) %>% 
+    rename(blank_result = Result)
   
   # Remove non-samples (including duplicates) from raw data.
   raw_data2 <- raw_data %>% filter(Sample_Type == "Sample")
@@ -86,12 +86,12 @@ for (i in seq_along(PCB_dataframes)) {
   # Merge TOTAL PCBs with rfd and csf.
   TPCBs_merged <- merge(merge(TPCBs, rfds2, by = "Analyte", all.x = TRUE),CSFs2, by = "Analyte", all.x=TRUE)
   
-  # Subset columns
-  # make HQ_TPCB for 2 meals/month:
+  # Subset columns.
+  # Make HQ_TPCB for 2 meals/month:
   # (concentration ng/g * 2 meals/month * 227 g/meal)/(rfd ng/kgBWday * 80 kgBW * 30.4 days/month)
-  # make CR_TPCB for 2 meals/month:
+  # Make CR_TPCB for 2 meals/month:
   # (concentration ng/g * 2 meals/month * 227 g/meal * CSF kgBWday/ng)/(80 kgBW * 30.4 days/month)
-  # make EPA_CR_TPCB for 24 meals per yr over 26 yrs with 70 yr averaging time:
+  # Make EPA_CR_TPCB for 24 meals per yr over 26 yrs with 70 yr averaging time:
   # (concentration ng/g * 227 g/meal * 24 meals/year * 26 years * CSF kgBWday/ng)/(80 kgBW * 25550 days)
   TPCBs_index <- TPCBs_merged %>% 
     select(ID, Analyte, Result, rfd, CSF) %>% 
@@ -107,8 +107,8 @@ for (i in seq_along(PCB_dataframes)) {
   TPCBs_index_wide <- TPCBs_index %>% pivot_wider(names_from = Analyte, values_from = Result)
   
   # Change congener NA values and values < DL to 0.
-  # data protocol involved setting values below detection limits to 0 ng/g
-  # NA values existed for a few samples that received testing but were not quantified. These were also set to 0
+  # Data protocol involved setting values below detection limits to 0 ng/g.
+  # NA values existed for a few samples that received testing but were not quantified. These were also set to 0.
   PCB_congeners_noNA <- PCB_congeners %>% mutate(Result = if_else(Result < Reporting_Limit | is.na(Result), 0, Result)) 
   
   # Subset columns from congener data and pivot to wide format.
