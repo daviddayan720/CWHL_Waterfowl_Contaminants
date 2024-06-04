@@ -21,21 +21,20 @@
 #
 # --------------------------------------------
 
-# Load required pacakges 
-library(tidyverse)
+# Load required package. 
+library(tidyverse) # Version 2.0.0.
 
-# Read in study metadata
+# Read in study metadata.
 metadata <- read_csv("Waterfowl Contaminant Study Sample Collection Metadata 2021-2022.csv")
 
-# Read in PFAS data from SGS AXYS
+# Read in PFAS data from SGS AXYS.
 PFAS <- read_csv("Waterfowl Muscle Tissue Per- and Polyfluoroalkyl Substance Data from SGS AXYS 2021-2022.csv")
 
-# Split the PFAS data based on SDG (sample batch identifier)
+# Split the PFAS data based on SDG (sample batch identifier).
 PFAS_list <- split(PFAS, PFAS$SDG, drop = TRUE)
 
-# Generate names for the list elements
+# Generate names for the list elements.
 names(PFAS_list) <- paste0("PFAS", seq_along(PFAS_list))
-
 PFAS1 <- PFAS_list[[1]]
 PFAS2 <- PFAS_list[[2]]
 PFAS3 <- PFAS_list[[3]]
@@ -43,14 +42,13 @@ PFAS4 <- PFAS_list[[4]]
 PFAS5 <- PFAS_list[[5]]
 PFAS6 <- PFAS_list[[6]]
 
-# Create a vector of data frame names
-PFAS_dataframes <- c("PFAS1", "PFAS2", "PFAS3",
-                     "PFAS4", "PFAS5", "PFAS6")
+# Create a vector of data frame names.
+PFAS_dataframes <- c("PFAS1", "PFAS2", "PFAS3","PFAS4", "PFAS5", "PFAS6")
 
 # Loop through each PFAS dataframe file.
 for (i in seq_along(PFAS_dataframes)) {
   
-  # Access data frame by name
+  # Access data frame by name.
   raw_data <- get(PFAS_dataframes[i])
   
   # Subset columns, remove % Lipid and Moisture results, rename Sample_ID to ID.
@@ -99,27 +97,27 @@ for (i in seq_along(PFAS_dataframes)) {
   # Loop through each analyte and perform the required operations.
   analytes <- unique(PFAS_merged$Analyte)
   for (analyte in analytes) {
-    # Select rows corresponding to the current analyte
+    # Select rows corresponding to the current analyte.
     analyte_data <- PFAS_merged %>% filter(Analyte == analyte)
-    # Extract the result and reference dose columns
+    # Extract the result and reference dose columns.
     result_col <- analyte_data$Result
     ref_dose <- unique(analyte_data$rfd)
     slope_factor <- unique(analyte_data$CSF)
-    # Create a new column in the result_df for the current analyte
+    # Create a new column in the result_df for the current analyte.
     PFAS_results[[analyte]] <- result_col
-    # Create a new column for HQ_Analyte 2 for meals/month only if ref_dose is available
+    # Create a new column for HQ_Analyte 2 for meals/month only if ref_dose is available.
     #(concentration ng/g * 2 meals/month * 227 g/meal)/(rfd ng/kgBWday * 80 kgBW * 30.4 days/month)
     if (!is.na(ref_dose)) {
       PFAS_results[[paste0("HQ_", analyte)]] <- 
         signif((result_col * 2 * 227) / (ref_dose * 80 * 30.4), digits = 3)
     }
-    # Create a new column for CR_Analyte for 2 meals/month only if slope_factor is available
+    # Create a new column for CR_Analyte for 2 meals/month only if slope_factor is available.
     # (concentration ng/g * 2 meals/month * 227 g/meal * CSF kgBWday/ng)/(80 kgBW * 30.4 days/month)
     if (!is.na(slope_factor)) {
       PFAS_results[[paste0("CR_", analyte)]] <- 
         signif((result_col * 2 * 227 * slope_factor) / (80 * 30.4), digits = 3)
     }
-    # Create a new column for EPA_CR_Analyte only if slope_factor is available
+    # Create a new column for EPA_CR_Analyte only if slope_factor is available.
     # 24 meals per yr over 26 yrs with 70 yr averaging time
     # (concentration ng/g * 227 g/meal * 24 meals/year * 26 years * CSF kgBWday/ng)/(80 kgBW * 25550 days)
     if (!is.na(slope_factor)) {
@@ -128,7 +126,7 @@ for (i in seq_along(PFAS_dataframes)) {
     }
   } # End loop through each analyte and perform the required operations.
   
-  # Create a new dataframe with the desired name in the global environment
+  # Create a new dataframe with the desired name in the global environment.
   assign(paste0('PFAS_full', i), PFAS_results)
   
 } # End loop through each CSV file.
@@ -143,15 +141,15 @@ PFAS_processed2 <- PFAS_processed %>%
   mutate(Sum_PFAS_EPACR = rowSums(select(., starts_with("EPA_CR_")), na.rm = TRUE)) %>% 
   select(-`original dataset`)
 
-# Check IDs in processed data for mismatches with metadata
+# Check IDs in processed data for mismatches with metadata.
 # Check that SGS IDs match metadata IDs
 metadata_PFAStest <- metadata %>% 
   filter(PFAS_test == "Y")
 ID_mismatch <- PFAS_processed2 %>% 
   filter(!ID %in% metadata_PFAStest$ID) 
-  #NJ-AGWT-02-NJ instead of NJ_AGWT_02_NJ
+#NJ-AGWT-02-NJ instead of NJ_AGWT_02_NJ
 
-#rename NJ-AGWT-02-NJ to NJ_AGWT_02_NJ
+# Rename NJ-AGWT-02-NJ to NJ_AGWT_02_NJ
 PFAS_processed3 <- PFAS_processed2 %>% 
   mutate(ID = if_else(ID == "NJ-AGWT-02-NJ", "NJ_AGWT_02_NJ", ID))
 
