@@ -20,16 +20,16 @@
 #
 # --------------------------------------------
 
-# Load required packages.
-library(tidyverse)
+# Load required package.
+library(tidyverse) # version 2.0.0.
 
-# load metadata
+# Load metadata.
 metadata <- read_csv("Waterfowl Contaminant Study Sample Collection Metadata 2021-2022.csv")
 
 # Group ABDU/MALL hybrid as ABDU (mallards are over represented and hybrids are similar to both).
 metadata <- metadata %>% mutate(species = if_else(species == "ABDU/MALL", "ABDU", species))
 
-# Make a table of sample sizes for collection (IDs = N), analysis of each contaminant, and analysis of all contaminants/
+# Make a table of sample sizes for collection (IDs = N), analysis of each contaminant, and analysis of all contaminants.
 result_table <- metadata %>%
   group_by(species) %>%
   summarise(IDs = n(),
@@ -40,10 +40,10 @@ result_table <- metadata %>%
             all_tests_Y = sum(Hg_test == "Y" & dioxin_test == "Y" & PFAS_test == "Y" & PCBOCP_test == "Y")
   )
 
-# View the result_table.
+# View the table.
 view(result_table)
 
-#Make a dataframe with samples that had at least 1 contaminant test
+# Make a dataframe with samples that had at least 1 contaminant test.
 metadata2 <- metadata %>%
   filter_at(vars(2:5), any_vars(. == "Y"))
 metadata2 %>%
