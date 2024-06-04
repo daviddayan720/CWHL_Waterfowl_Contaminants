@@ -21,35 +21,35 @@
 #
 # --------------------------------------------
 
-# Load required pacakges.
-library(tidyverse)
+# Load required package.
+library(tidyverse) # Version 2.0.0
 
-# Read in study metadata.
+# Load study metadata.
 metadata <- read_csv("Waterfowl Contaminant Study Sample Collection Metadata 2021-2022.csv")
 
-# Read in raw dioxin data from Pace Analytical.
+# Load raw dioxin data from Pace Analytical.
 dioxins <- read_csv("Waterfowl Muscle Tissue Dioxin and Furan Data from Pace Analytical 2021-22.csv")
 
-# Remove duplicate analyses and Percent Moisture and Percent Lipid
+# Remove duplicate analyses and Percent Moisture and Percent Lipid.
 dioxins2 <- dioxins %>% 
   filter(!grepl("DUP", ID)) %>% 
   filter(!Analyte %in% c("Moisture_Percent", "Lipid_Percent"))
 
-# Check ID values from Pace Analytical
+# Check ID values from Pace Analytical.
 dioxin_IDs <- unique(dioxins2$ID) #104 samples were analyzed, 104 unique IDs
 
-# Check that Pace IDs match metadata IDs
+# Check that Pace IDs match metadata IDs.
 metadata_dioxintest <- metadata %>% 
   filter(dioxin_test == "Y")
 ID_mismatch <- dioxins2 %>% 
   filter(!ID %in% metadata_dioxintest$ID) # no mismatched IDs
 
-# Change ND Results to 0
+# Change ND Results to 0.
 dioxins3 <- dioxins2 %>%
   mutate(Result = if_else(Result == "ND", "0", Result))
 dioxins3$Result = as.numeric(dioxins3$Result)
 
-# check to make sure no NAs were introduced
+# Check to make sure no NAs were introduced.
 sum(is.na(dioxins3$Result)) #no NAs
 
 # Change ng/kg to ng/g (/1000).
@@ -71,13 +71,13 @@ CSFs2 <- CSFs %>% select(Analyte, CSF)
 # Merge TEQ data with reference doses and CSFs.
 TEQ_merged <- merge(merge(TEQs, rfds2, by = "Analyte", all.x = TRUE),CSFs2, by = "Analyte", all.x = TRUE)
 
-# Remove result qualifiers, rfd units, and EDL
-  #Make HQ_TEQ for 2 meals/month:
-    # (concentration ng/g * 2 meals/month * 227 g/meal)/(rfd ng/kgBWday * 80 kgBW * 30.4 days/month)
-  # Make CR_TEQ for 2 meals/month:
-    # (concentration ng/g * 2 meals/month * 227 g/meal * CSF kgBWday/ng)/(80 kgBW * 30.4 days/month)
-  # Make EPA_CR_TEQ for 24 meals per yr over 26 yrs with 70 yr averaging time:
-    # (concentration ng/g * 227 g/meal * 24 meals/year * 26 years * CSF kgBWday/ng)/(80 kgBW * 25550 days)
+# Remove result qualifiers, rfd units, and EDL.
+# Make HQ_TEQ for 2 meals/month:
+# (concentration ng/g * 2 meals/month * 227 g/meal)/(rfd ng/kgBWday * 80 kgBW * 30.4 days/month)
+# Make CR_TEQ for 2 meals/month:
+# (concentration ng/g * 2 meals/month * 227 g/meal * CSF kgBWday/ng)/(80 kgBW * 30.4 days/month)
+# Make EPA_CR_TEQ for 24 meals per yr over 26 yrs with 70 yr averaging time:
+# (concentration ng/g * 227 g/meal * 24 meals/year * 26 years * CSF kgBWday/ng)/(80 kgBW * 25550 days)
 TEQ_index <- TEQ_merged %>% 
   select(-Result_Qualifier, -EDL, -unit) %>% 
   mutate(HQ_TEQ = (Result*2*227)/(rfd * 80 * 30.4)) %>%
@@ -91,7 +91,7 @@ TEQ_index <- TEQ_merged %>%
 # Pivot TEQ and TEQ HQ data to wide format.
 TEQ_wide <- TEQ_index %>% pivot_wider(names_from = Analyte, values_from = Result)
 
-# remove result qualifier and EDL from congener data and pivot to wide
+# Remove result qualifier and EDL from congener data and pivot to wide.
 congeners_wide <- congeners %>% 
   select(-EDL, -Result_Qualifier) %>% 
   pivot_wider(names_from = Analyte, values_from = Result)
