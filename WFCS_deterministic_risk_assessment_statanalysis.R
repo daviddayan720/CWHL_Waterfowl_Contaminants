@@ -109,7 +109,7 @@ ggsave("Total_HI_by_species.png", plot = Total_HI_histo, dpi = 1000, width = 7.8
 species_counts_Hg <- risk_data_merged %>% group_by(species) %>% summarize(count = sum(!is.na(HQ_Hg)))
 
 # Make a data frame of factors with significance labels from Dunn's Test.
-sig_labels_Hg <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), label = c("bc", "a", "ab", "", "c"))
+sig_labels_Hg <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), label = c("bc", "a", "ab", "d", "c"))
 
 # Create custom labeller function for facet labels.
 label_species_Hg <- function(variable) {
