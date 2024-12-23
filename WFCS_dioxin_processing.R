@@ -101,3 +101,51 @@ dioxins_processed <- full_join(TEQ_wide, congeners_wide, by = "ID")
 
 # Write the dioxins data.
 write_csv(dioxins_processed, "WFCS_dioxins_processed.csv")
+
+
+# EMPC and 2024 TEF Sensitivity Testing -----------------------------------
+
+toxic_congeners <- unique(congeners$Analyte)[!grepl("Total", unique(congeners$Analyte))]
+TEFs <- data.frame(Analyte = toxic_congeners,
+                   TEF_2005 = c(.1, 1,.03,
+                                .3, 1,.1, 
+                                .1,.1,.1,
+                                .1,.1,.1,
+                                .01,.01,.01,
+                                .0003, .0003),
+                   TEF_2024 = c(.07, 1, .01,
+                                .1,.4,.3,
+                                .09,.1,.2,
+                                .09,.07,.05,
+                                .02,.1,.05,
+                                .002, .001))
+congeners_TEF <- full_join(congeners, TEFs, by = "Analyte") %>% filter(Analyte %in% toxic_congeners)
+
+congeners_equiv <- congeners_TEF %>% 
+  mutate(equiv_2024 = Result * TEF_2024,
+         equiv_2005 = Result * TEF_2005,
+         equiv_2005_no_empc = if_else(Result_Qualifier %in% c("IJ", "PJ", "I", "P"), 0, Result * TEF_2005)
+         )
+manual_TEQs <- congeners_equiv %>% 
+  group_by(ID) %>% 
+  summarize(TEQ_2024 = sum(equiv_2024),
+            TEQ_2005 = sum(equiv_2005),
+            TEQ_2005_empc = sum(equiv_2005_no_empc))
+manual_TEQs_check <- full_join(manual_TEQs, TEQ_wide %>% select(ID, TEQ), by = "ID") %>% 
+  mutate(manual_check = TEQ_2005/TEQ,
+         EMPC_check = 100- 100*(TEQ_2005_empc / TEQ_2005),
+         TEF_check = 100* ((TEQ_2024 - TEQ_2005)/TEQ_2005))
+manual_TEQs_check %>% 
+  summarize(
+    min_EMPC_contribution = min(EMPC_check, na.rm = TRUE),
+    max_EMPC_contribution = max(EMPC_check, na.rm = TRUE),
+    mean_EMPC_contribution = mean(EMPC_check, na.rm = TRUE),
+    median_EMPC_contribution = median(EMPC_check, na.rm = TRUE),
+    min_TEF_change = min(TEF_check, na.rm = TRUE),
+    max_TEF_change = max(TEF_check, na.rm = TRUE),
+    mean_TEF_change = mean(TEF_check, na.rm = TRUE),
+    median_TEF_change = median(TEF_check, na.rm = TRUE),
+  ) %>% 
+  pivot_longer(cols = 1:8,
+               names_to = "Summary", 
+               values_to = "Value")
