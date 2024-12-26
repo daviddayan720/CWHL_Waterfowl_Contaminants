@@ -124,7 +124,7 @@ NMDS1_species <- as.data.frame(NMDS1$points) %>%
 ellipse_grp <- confidence_ellipse(NMDS1_species, x = MDS1, y = MDS2, .group_by = species, conf_level = .95)
 
 #Visualize NMDS by species
-NMDS1_species %>% ggplot() +
+NMDS_figure <- NMDS1_species %>% ggplot() +
   geom_point(data = NMDS1_species, mapping = aes(x = MDS1, y = MDS2, color = species), size = 3, alpha = 0.7) +  # Add points
   geom_polygon(data = ellipse_grp, aes(x = x, y = y, color = species),fill = NA, alpha = .45, linetype = "solid") +
   labs(
@@ -140,3 +140,6 @@ NMDS1_species %>% ggplot() +
         panel.grid = element_blank(),
         axis.text = element_blank(),
         axis.ticks = element_blank())
+
+#save the plot
+ggsave("NMDS.png", plot = NMDS_figure, dpi = 1000, width = 7.8, height = 5.83)
