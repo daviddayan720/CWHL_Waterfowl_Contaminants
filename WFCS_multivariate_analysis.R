@@ -81,7 +81,7 @@ relativized_matrix <- vegdist(waterfowl_relativized[3:180], method = "bray") #di
 #Run pairwise tests
 pairwise.adonis2(resp = relativized_matrix, 
                  fact = waterfowl_relativized$species,
-                 p.method = "holm",
+                 p.method = "none",
                  nperm = 9999)
 
 permdisp1 <- betadisper(

@@ -1,5 +1,5 @@
 # --------------------------------------------
-# WFCS Determinisitc risk assessment stat analysis
+# WFCS Determinisitic risk assessment stat analysis
 #
 # Code Author: David Dayan
 # Code QAQC: Brenda Hanley
@@ -51,7 +51,7 @@ variables_to_test_HQ <- c("HQ_Hg", "HQ_TEQ", "HQ_TPCB", "Sum_OCPs_HQ", "Sum_PFAS
 
 # Compare the variables
 for (variable in variables_to_test_HQ) {
-  result <- dunn.test(x = risk_data_merged[[variable]], g = risk_data_merged$species, method = "holm")
+  result <- dunn.test(x = risk_data_merged[[variable]], g = risk_data_merged$species, method = "none")
 }
 
 # ---------------------------------------------------------------------------
@@ -79,7 +79,8 @@ generate_breaks_labels <- function(max_value, bin_width, label_interval) {
 breaks_labels_HI <- generate_breaks_labels(max_value_HI, 0.25, 0.5)
 
 # Make a data frame of factors with significance labels from Dunn's Test.
-sig_labels_HI <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), label = c("a", "a", "a", "b", "b"))
+sig_labels_HI <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), 
+                            label = c("a", "a", "ab", "b", "b"))
 
 # Produce the plot.
 Total_HI_histo <- risk_data_merged %>%
@@ -109,7 +110,8 @@ ggsave("Total_HI_by_species.png", plot = Total_HI_histo, dpi = 1000, width = 7.8
 species_counts_Hg <- risk_data_merged %>% group_by(species) %>% summarize(count = sum(!is.na(HQ_Hg)))
 
 # Make a data frame of factors with significance labels from Dunn's Test.
-sig_labels_Hg <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), label = c("bc", "a", "ab", "d", "c"))
+sig_labels_Hg <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), 
+                            label = c("ab", "a", "ab", "c", "b"))
 
 # Create custom labeller function for facet labels.
 label_species_Hg <- function(variable) {
@@ -162,7 +164,8 @@ generate_breaks_labels_TEQ <- function(max_value, bin_width, label_interval) {
 breaks_labels_TEQ <- generate_breaks_labels_TEQ(max_value_TEQ, 0.25, 0.5)
 
 # Make a data frame of factors with significance labels from Dunn's Test.
-sig_labels_TEQ <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), label = c("a", "a", "ab", "bc", "c"))
+sig_labels_TEQ <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), 
+                             label = c("a", "ab", "abc", "bc", "c"))
 
 # Produce the plot. 
 TEQ_HQ_histo <- risk_data_merged %>%
@@ -208,7 +211,8 @@ generate_breaks_labels_TPCB <- function(max_value, bin_width, label_interval) {
 } # End helper function.
 
 # Make a data frame of factors with significance labels from Dunn's Test
-sig_labels_TPCB <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), label = c("a", "a", "ab", "b", "b"))
+sig_labels_TPCB <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), 
+                              label = c("a", "ab", "abc", "bc", "c"))
 
 # Use the helper function on data.
 breaks_labels_TPCB <- generate_breaks_labels_TPCB(max_value_TPCB, 0.25, 0.5)
@@ -248,7 +252,8 @@ label_species_OCP <- function(variable) {
 } # End labeler 
 
 # Make a data frame of factors with significance labels from Dunn's Test.
-sig_labels_OCPs <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), label = c("ab", "a", "ab", "ab", "b"))
+sig_labels_OCPs <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), 
+                              label = c("ab", "a", "ab", "ab", "b"))
 
 # Produce the plot.
 OCP_HI_histo <- risk_data_merged %>% 
@@ -293,7 +298,8 @@ generate_breaks_labels_PFAS <- function(max_value, bin_width, label_interval) {
 } # End create helper function. 
 
 # Make a data frame of factors with significance labels from Dunn's Test.
-sig_labels_PFAS <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), label = c("a", "ab", "a", "c", "bc"))
+sig_labels_PFAS <- data.frame(species = factor(c("MALL", "ABDU", "AGWT", "CAGO", "WODU")), 
+                              label = c("a", "ab", "ab", "c", "bc"))
 
 # Apply the helper function to data.
 breaks_labels_PFAS <- generate_breaks_labels_PFAS(max_value_PFAS, 0.25, 0.5)
